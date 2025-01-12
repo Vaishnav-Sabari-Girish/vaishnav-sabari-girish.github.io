@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnav Sabari Girish - Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #4F46E5, 0 0 10px #4F46E5, 0 0 15px #4F46E5; }
+            100% { box-shadow: 0 0 10px #4F46E5, 0 0 20px #4F46E5, 0 0 30px #4F46E5; }
+        }
+        .project-card:hover {
+            animation: glow 1.5s ease-in-out infinite alternate;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="border-b border-gray-800 backdrop-blur-md bg-gray-900/80 fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                    VSG
+                </a>
+                <a href="index.html" class="px-4 py-2 rounded-full border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                My Projects
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                Exploring the intersection of hardware and software through innovative solutions
+            </p>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Arduino Interactive CLI -->
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-indigo-400">Arduino Interactive CLI</h3>
+                        <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        A command-line interface tool that makes Arduino development more interactive and user-friendly.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Bash</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Arduino</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">CLI</span>
+                    </div>
+                </div>
+
+                <!-- Rust TUI -->
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-indigo-400">Rust TUI Projects</h3>
+                        <a href="https://github.com/Vaishnav-Sabari-Girish/Rust_TUI_Projects" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Collection of Terminal User Interface applications built with Rust, showcasing modern CLI design patterns.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Rust</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">TUI</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Terminal</span>
+                    </div>
+                </div>
+
+                <!-- Water Purity Tester -->
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-indigo-400">Portable Water Purity Tester</h3>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fas fa-flask text-2xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        A portable device for testing water quality parameters, making water safety testing accessible and efficient.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">IoT</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Hardware</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Sensors</span>
+                    </div>
+                </div>
+
+                <!-- Water Level Monitoring -->
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-indigo-400">Wireless Water Level Monitoring</h3>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fas fa-water text-2xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Smart monitoring system for overhead water tanks using wireless technology and real-time alerts.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">IoT</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Wireless</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Automation</span>
+                    </div>
+                </div>
+
+                <!-- Smart Door Lock -->
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-indigo-400">Smart Door Lock using Li-Fi</h3>
+                        <span class="text-gray-400">
+                            <i class="fas fa-lock text-2xl"></i>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Innovative door lock system using Light Fidelity (Li-Fi) technology for secure access control.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Li-Fi</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Security</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">IoT</span>
+                    </div>
+                </div>
+
+                <!-- Smart Farm Monitoring -->
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-indigo-400">Smart Farm Monitoring</h3>
+                        <a href="https://github.com/Vaishnav-Sabari-Girish/field_monitoring_system" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Comprehensive system for monitoring agricultural fields with sensors and automated data collection.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Agriculture</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">IoT</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Vaishnav Sabari Girish. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
