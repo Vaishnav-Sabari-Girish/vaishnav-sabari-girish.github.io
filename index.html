@@ -1,20 +1,150 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <h1 align="center">Vaishnav Sabari Girish</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnav Sabari Girish - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-  <title>Vaishnav Sabari Girish</title>
+<body class="bg-gray-100">
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="flex flex-col items-center text-center">
+                <img src="dp.png" alt="Profile Picture" class="w-32 h-32 rounded-full mb-6 border-4 border-white shadow-lg">
+                <h1 class="text-4xl font-bold mb-4">Vaishnav Sabari Girish</h1>
+                <p class="text-xl mb-8">Electronics And Comunicaion Engineering student</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/Vaishnav-Sabari-Girish" class="bg-white text-gray-900 px-6 py-2 rounded-full hover:bg-gray-100 transition">View Projects</a>
+                    <a href="#contact" class="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <h2>My Projects</h2>
-  <ul>
-    <li>
-      <a href="https://vaishnav-sabari-girish.github.io/arduino-cli-interactive/">
-        Arduino CLI Interactive
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/Vaishnav-Sabari-Girish/Rust_TUI_Projects">
-        Rust TUI Projects
-      </a>
-    </li>
-  </ul>
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                <p class="mb-6">
+                    I’m Vaishnav, a third-year Electronics and Communication Engineering (ECE) student 
+                    passionate about technology, innovation, and space exploration. Eager to excel as 
+                    an engineer, I am committed to mastering emerging technologies and contributing to 
+                    advancements in electronics, communication, and the exploration of the universe. 
+                    Enthusiastic about modern tech, I thrive on learning and growing in this dynamic field.
+                </p>
+                <p>
+                    I am especially interested in the fields of Linux Kernel Development, Embedded Systems, 
+                    Embedded Software, Embedded Linux and Embedded Programming. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Programing Languages</h3>
+                    <p class="text-gray-600">
+                      <ul>
+                        <li>C</li>
+                        <li>Embedded C</li>
+                        <li>C++</li>
+                        <li>MicroPython</li>
+                        <li>Python</li>
+                        <li>MATLAB/OCTAVE/SCILAB</li>
+                        <li>Shell Scripting (Bash, Nu, Fish)</li>
+                      </ul>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Software and Tools</h3>
+                    <p class="text-gray-600">
+                      <ul>
+                        <li>Arduino</li>
+                        <li>Git and GitHub</li>
+                        <li>LT Spice</li>
+                        <li>Proteus</li>
+                        <li>Inkscape</li>
+                        <li>KiCad</li>
+                        <li>MATLAB</li>
+                        <li>NeoVim/Vim</li>
+                        <li>LabbView</li>
+                      </ul>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Technical Skills</h3>
+                    <p class="text-gray-600">
+                      <ul>
+                        <li>Linux</li>
+                        <li>Embedded Linux</li>
+                        <li>Circuit Debugging</li>
+                        <li>Embedded Programming</li>
+                        <li>Signal Processing</li>
+                      </ul>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                    <p class="text-gray-600">
+                      <ul>
+                        <li>Team Work</li>
+                        <li>Leadership</li>
+                        <li>Problem Solving</li>
+                        <li>Analytical Thinking</li>
+                      </ul>
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
+                    <p class="text-gray-600">
+                      <ul>
+                        <li>English (Written and Spoken)</li>
+                        <li>Japanese (N3 Level)</li>
+                        <li>Tamil (Spoken)</li>
+                        <li>Kannada (Written and Spoken)</li>
+                        <li>Hindi (Spoken)</li>
+                      </ul>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Let's Connect</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/vaishnav-sabari-girish/" class="text-gray-700 hover:text-blue-600 transition">
+                    <i class="fab fa-linkedin text-3xl"></i>
+                </a>
+                <a href="https://github.com/Vaishnav-Sabari-Girish" class="text-gray-700 hover:text-gray-900 transition">
+                    <i class="fab fa-github text-3xl"></i>
+                </a>
+                <a href="https://t.me/vaishnav_dev" class="text-gray-700 hover:text-blue-500 transition">
+                    <i class="fab fa-telegram text-3xl"></i>
+                </a>
+                <a href="https://mastodon.social/@vaishnav_s" class="text-gray-700 hover:text-purple-600 transition">
+                    <i class="fab fa-mastodon text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Vaishnav Sabari Girish. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
