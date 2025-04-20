@@ -6,6 +6,8 @@
     <title>Vaishnav Sabari Girish - Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
         @keyframes glow {
             0% { box-shadow: 0 0 5px #4F46E5, 0 0 10px #4F46E5, 0 0 15px #4F46E5; }
@@ -34,7 +36,7 @@
 
     <!-- Hero Section -->
     <header class="pt-32 pb-16">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
             <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
                 My Projects
             </h1>
@@ -49,7 +51,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Arduino Interactive CLI -->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">Arduino Interactive CLI</h3>
                         <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive" class="text-gray-400 hover:text-white">
@@ -67,7 +69,7 @@
                 </div>
 
                 <!-- Rust TUI -->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">Rust TUI Projects</h3>
                         <a href="https://github.com/Vaishnav-Sabari-Girish/Rust_TUI_Projects" class="text-gray-400 hover:text-white">
@@ -85,7 +87,7 @@
                 </div>
 
                 <!-- Water Purity Tester -->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">Portable Water Purity Tester</h3>
                         <a href="https://set.jainuniversity.ac.in/academics/electronics-and-communications/pdf/development-activities/water-purity-vishnav-sabari-girishand-aryan.pdf" class="text-gray-400 hover:text-white">
@@ -103,7 +105,7 @@
                 </div>
 
                 <!-- Water Level Monitoring -->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">Wireless Water Level Monitoring</h3>
                         <a href="#" class="text-gray-400 hover:text-white">
@@ -121,7 +123,7 @@
                 </div>
 
                 <!-- Smart Door Lock -->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">
                           Smart Door Lock using Li-Fi
@@ -143,7 +145,7 @@
                 </div>
 
                 <!-- Smart Farm Monitoring -->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">Smart Farm Monitoring</h3>
                         <a href="https://github.com/Vaishnav-Sabari-Girish/field_monitoring_system" class="text-gray-400 hover:text-white">
@@ -161,7 +163,7 @@
                 </div>
 
                 <!--EbiShell Project-->
-                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300">
+                <div class="project-card bg-gray-800 rounded-xl p-6 transition-all duration-300" data-aos="fade-up">
                     <div class="flex items-start justify-between mb-4">
                         <h3 class="text-2xl font-bold text-indigo-400">EbiShell</h3>
                         <a href="https://github.com/Vaishnav-Sabari-Girish/EbiShell-Test" class="text-gray-400 hover:text-white">
@@ -187,5 +189,14 @@
             <p>&copy; 2025 Vaishnav Sabari Girish. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 </html>
