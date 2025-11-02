@@ -604,3 +604,68 @@ if (typeof module !== 'undefined' && module.exports) {
         executeCommand
     };
 }
+
+// ==========================================
+// HAMBURGER MENU - FINAL FIXED VERSION
+// ==========================================
+
+function initHamburgerMenu() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-link');
+    
+    if (!hamburgerBtn || !navLinks) {
+        console.error('❌ Hamburger menu elements not found');
+        return;
+    }
+    
+    // Toggle menu on hamburger click
+    hamburgerBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking nav links (FIXED)
+    navLinksItems.forEach((link) => {
+        link.addEventListener('click', function(e) {
+            // Always close menu on mobile when link is clicked
+            if (window.innerWidth <= 768) {
+                hamburgerBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const isClickInsideNav = navLinks.contains(e.target) || hamburgerBtn.contains(e.target);
+        
+        if (!isClickInsideNav && navLinks.classList.contains('active')) {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+    
+    // Close menu on window resize to desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+    
+    // Close menu on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initHamburgerMenu();
+});

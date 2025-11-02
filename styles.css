@@ -1076,3 +1076,128 @@ body {
     10% { transform: translate(2px, 2px); }
     20% { transform: translate(-2px, -2px); }
 }
+
+
+/* ==========================================
+   HAMBURGER MENU - FINAL CLEAN VERSION
+   ========================================== */
+
+/* Hamburger Button */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Ensure nav has proper positioning */
+.terminal-nav {
+    position: relative;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .nav-prompt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Mobile Navigation Menu */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-top: none;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Show menu when active */
+    .nav-links.active {
+        max-height: 400px;
+        opacity: 1;
+    }
+    
+    /* Mobile nav link styling */
+    .nav-link {
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border-color);
+        display: block;
+        color: var(--text-primary);
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(0, 255, 65, 0.1);
+        color: var(--text-primary);
+        text-shadow: 0 0 8px var(--neon-glow);
+        transform: translateX(5px);
+    }
+    
+    /* Add left border accent on hover/active */
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--text-primary);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        transform: scaleY(1);
+    }
+}
