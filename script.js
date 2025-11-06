@@ -5,6 +5,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the terminal system
     initializeTerminal();
+    // Initialize hamburger menu
+    initHamburgerMenu();
 });
 
 /* ==========================================
@@ -72,13 +74,14 @@ function initNavigation() {
 }
 
 /* ==========================================
-   COMMAND SIMULATION
+   COMMAND SIMULATION - UPDATED WITH EXPERIENCES
    ========================================== */
 
 function simulateCommand(section) {
     const commands = {
         'home': 'cd ~/ && whoami',
         'about': 'cat about.md',
+        'experiences': 'ls -la /work/experiences/',
         'skills': 'ls -la /skills/',
         'projects': 'ls -la /projects/',
         'contact': 'cat /etc/contact.conf'
@@ -248,6 +251,18 @@ function initTerminalInteractions() {
         });
     });
     
+    // Add hover effects to experience cards
+    const experienceCards = document.querySelectorAll('.experience-card');
+    experienceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 0 25px rgba(0, 255, 65, 0.4)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.boxShadow = '0 0 25px rgba(0, 255, 65, 0.2)';
+        });
+    });
+    
     // Add interactive effects to contact links
     const contactLinks = document.querySelectorAll('.contact-link');
     contactLinks.forEach(link => {
@@ -280,6 +295,8 @@ function initScrollEffects() {
                     animateProjectCard(entry.target);
                 } else if (entry.target.classList.contains('skill-category')) {
                     animateSkillCategory(entry.target);
+                } else if (entry.target.classList.contains('experience-card')) {
+                    animateExperienceCard(entry.target);
                 }
             }
         });
@@ -289,7 +306,7 @@ function initScrollEffects() {
     });
     
     // Observe elements for animations
-    document.querySelectorAll('.project-card, .skill-category, .contact-item').forEach(el => {
+    document.querySelectorAll('.project-card, .skill-category, .contact-item, .experience-card').forEach(el => {
         observer.observe(el);
     });
 }
@@ -307,6 +324,17 @@ function animateProjectCard(card) {
         card.style.opacity = '1';
         card.style.transform = 'translateY(0)';
     }, 100);
+}
+
+function animateExperienceCard(card) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateX(-30px)';
+    
+    setTimeout(() => {
+        card.style.transition = 'all 0.8s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateX(0)';
+    }, 150);
 }
 
 function animateSkillCategory(category) {
@@ -502,7 +530,7 @@ function initSoundEffects() {
 }
 
 /* ==========================================
-   KEYBOARD SHORTCUTS
+   KEYBOARD SHORTCUTS - UPDATED WITH EXPERIENCES
    ========================================== */
 
 document.addEventListener('keydown', function(e) {
@@ -519,13 +547,17 @@ document.addEventListener('keydown', function(e) {
                 break;
             case '3':
                 e.preventDefault();
-                document.querySelector('[data-section="skills"]').click();
+                document.querySelector('[data-section="experiences"]').click();
                 break;
             case '4':
                 e.preventDefault();
-                document.querySelector('[data-section="projects"]').click();
+                document.querySelector('[data-section="skills"]').click();
                 break;
             case '5':
+                e.preventDefault();
+                document.querySelector('[data-section="projects"]').click();
+                break;
+            case '6':
                 e.preventDefault();
                 document.querySelector('[data-section="contact"]').click();
                 break;
@@ -539,75 +571,8 @@ document.addEventListener('keydown', function(e) {
 });
 
 /* ==========================================
-   PERFORMANCE OPTIMIZATION
+   HAMBURGER MENU - COMPLETE IMPLEMENTATION
    ========================================== */
-
-// Throttle scroll events
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-// Optimize animations for performance
-if ('requestIdleCallback' in window) {
-    requestIdleCallback(function() {
-        // Initialize non-critical animations when browser is idle
-        initSecondaryAnimations();
-    });
-} else {
-    // Fallback for browsers without requestIdleCallback
-    setTimeout(initSecondaryAnimations, 1000);
-}
-
-function initSecondaryAnimations() {
-    // Add any secondary animations that don't need immediate initialization
-    const elements = document.querySelectorAll('.project-card, .skill-category');
-    elements.forEach((el, index) => {
-        el.style.animationDelay = `${index * 0.1}s`;
-    });
-}
-
-/* ==========================================
-   ERROR HANDLING
-   ========================================== */
-
-window.addEventListener('error', function(e) {
-    console.error('Terminal Error:', e.error);
-    showTerminalMessage('System error detected. Self-diagnostics running...');
-});
-
-// Service worker registration (optional, for offline functionality)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        // Uncomment to register service worker
-        // navigator.serviceWorker.register('/sw.js');
-    });
-}
-
-/* ==========================================
-   EXPORT FOR TESTING
-   ========================================== */
-
-// Export functions for testing (if needed)
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        typeText,
-        showTerminalMessage,
-        executeCommand
-    };
-}
-
-// ==========================================
-// HAMBURGER MENU - FINAL FIXED VERSION
-// ==========================================
 
 function initHamburgerMenu() {
     const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -628,7 +593,7 @@ function initHamburgerMenu() {
         navLinks.classList.toggle('active');
     });
     
-    // Close menu when clicking nav links (FIXED)
+    // Close menu when clicking nav links
     navLinksItems.forEach((link) => {
         link.addEventListener('click', function(e) {
             // Always close menu on mobile when link is clicked
@@ -666,6 +631,69 @@ function initHamburgerMenu() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    initHamburgerMenu();
+/* ==========================================
+   PERFORMANCE OPTIMIZATION
+   ========================================== */
+
+// Throttle scroll events
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+// Optimize animations for performance
+if ('requestIdleCallback' in window) {
+    requestIdleCallback(function() {
+        // Initialize non-critical animations when browser is idle
+        initSecondaryAnimations();
+    });
+} else {
+    // Fallback for browsers without requestIdleCallback
+    setTimeout(initSecondaryAnimations, 1000);
+}
+
+function initSecondaryAnimations() {
+    // Add any secondary animations that don't need immediate initialization
+    const elements = document.querySelectorAll('.project-card, .skill-category, .experience-card');
+    elements.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.1}s`;
+    });
+}
+
+/* ==========================================
+   ERROR HANDLING
+   ========================================== */
+
+window.addEventListener('error', function(e) {
+    console.error('Terminal Error:', e.error);
+    showTerminalMessage('System error detected. Self-diagnostics running...');
 });
+
+// Service worker registration (optional, for offline functionality)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        // Uncomment to register service worker
+        // navigator.serviceWorker.register('/sw.js');
+    });
+}
+
+/* ==========================================
+   EXPORT FOR TESTING
+   ========================================== */
+
+// Export functions for testing (if needed)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        typeText,
+        showTerminalMessage,
+        executeCommand
+    };
+}

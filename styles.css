@@ -516,6 +516,231 @@ body {
 }
 
 /* ==========================================
+   EXPERIENCES SECTION STYLES
+   ========================================== */
+
+.experiences-container {
+    margin-top: 16px;
+}
+
+.experiences-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 20px;
+}
+
+.experience-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cyber-blue), transparent);
+    transition: left 0.5s ease;
+}
+
+.experience-card:hover {
+    border-color: var(--text-primary);
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.2);
+    transform: translateY(-3px);
+}
+
+.experience-card:hover::before {
+    left: 100%;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.company-icon {
+    font-size: 28px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.company-details {
+    flex: 1;
+}
+
+.company-name {
+    color: var(--text-secondary);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.position-title {
+    color: var(--text-accent);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.duration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    text-align: right;
+}
+
+.time-badge {
+    background: rgba(0, 255, 65, 0.1);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    white-space: nowrap;
+}
+
+.location {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-style: italic;
+}
+
+.experience-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description-text p {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+}
+
+.achievements-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.achievements-list li {
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.achievements-list .bullet {
+    color: var(--text-accent);
+    font-weight: bold;
+    min-width: 12px;
+    margin-top: 2px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--cyber-blue);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    font-weight: 500;
+}
+
+/* Responsive design for experiences */
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .duration {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .company-info {
+        min-width: auto;
+    }
+    
+    .company-icon {
+        font-size: 24px;
+        min-width: 36px;
+    }
+    
+    .company-name {
+        font-size: 18px;
+    }
+    
+    .position-title {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card {
+        padding: 20px;
+    }
+    
+    .experiences-grid {
+        gap: 24px;
+    }
+    
+    .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .company-icon {
+        font-size: 20px;
+    }
+    
+    .tech-stack {
+        gap: 6px;
+    }
+    
+    .tech-tag {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+}
+
+/* ==========================================
    SKILLS SECTION STYLES
    ========================================== */
 
