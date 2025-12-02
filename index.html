@@ -3,700 +3,587 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnav Sabari Girish - Space Terminal</title>
-    
-    <!-- Preload critical fonts -->
+    <title>Vaishnav Sabari Girish</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Star field background -->
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-    
-    <!-- Scanlines overlay -->
-    <div class="scanlines"></div>
-    
-    <!-- Terminal interface -->
-    <div class="terminal-container">
-        <!-- Terminal header -->
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn close"></span>
-                <span class="btn minimize"></span>
-                <span class="btn maximize"></span>
-            </div>
-            <div class="terminal-title">vaishnav@space-terminal</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">VSG</a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-        
-        <!-- Navigation -->
-        <nav class="terminal-nav">
-            <div class="nav-prompt">
-                <span class="prompt-symbol">></span>
-                <span class="nav-text">NAVIGATION_SYSTEM_ONLINE</span>
-                <!-- Hamburger Menu Button -->
-                <button class="hamburger-menu" id="hamburger-btn">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-            <div class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link active" data-section="home">
-                    <span class="link-symbol">[</span>HOME<span class="link-symbol">]</span>
-                </a>
-                <a href="#about" class="nav-link" data-section="about">
-                    <span class="link-symbol">[</span>ABOUT<span class="link-symbol">]</span>
-                </a>
-                <a href="#experiences" class="nav-link" data-section="experiences">
-                  <span class="link-symbol">[</span>EXPERIENCES<span class="link-symbol">]</span>
-                </a>
-                <a href="#skills" class="nav-link" data-section="skills">
-                    <span class="link-symbol">[</span>SKILLS<span class="link-symbol">]</span>
-                </a>
-                <a href="#projects" class="nav-link" data-section="projects">
-                    <span class="link-symbol">[</span>PROJECTS<span class="link-symbol">]</span>
-                </a>
-                <a href="#contact" class="nav-link" data-section="contact">
-                    <span class="link-symbol">[</span>CONTACT<span class="link-symbol">]</span>
-                </a>
-            </div>
-        </nav>
-        
-        <!-- Main content -->
-        <main class="terminal-content">
-            <!-- Home Section -->
-            <section id="home" class="content-section active">
-                <div class="terminal-output">
-                    <div class="output-line">
-                        <span class="prompt">vaishnav@space-terminal:~$</span>
-                        <span class="command">whoami</span>
-                    </div>
-                </div>
-                
-                <div class="ascii-art">
-                    <pre>
-██╗   ██╗ █████╗ ██╗███████╗██╗  ██╗███╗   ██╗ █████╗ ██╗   ██╗
-██║   ██║██╔══██╗██║██╔════╝██║  ██║████╗  ██║██╔══██╗██║   ██║
-██║   ██║███████║██║███████╗███████║██╔██╗ ██║███████║██║   ██║
-╚██╗ ██╔╝██╔══██║██║╚════██║██╔══██║██║╚██╗██║██╔══██║╚██╗ ██╔╝
- ╚████╔╝ ██║  ██║██║███████║██║  ██║██║ ╚████║██║  ██║ ╚████╔╝ 
-  ╚═══╝  ╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  
-                    </pre>
-                </div>
-                
-                <div class="profile-info">
-                    <div class="info-line">
-                        <span class="label">NAME:</span>
-                        <span class="value">Vaishnav Sabari Girish</span>
-                    </div>
-                    <div class="info-line">
-                        <span class="label">ROLE:</span>
-                        <span class="value typing-text">Electronics & Communication Engineering Student</span>
-                    </div>
-                    <div class="info-line">
-                        <span class="label">LOCATION:</span>
-                        <span class="value">Bangalore, India</span>
-                    </div>
-                    <div class="info-line">
-                        <span class="label">STATUS:</span>
-                        <span class="value status-online">● ONLINE - Ready for mission</span>
-                    </div>
-                    <div class="info-line">
-                        <span class="label">FOCUS_AREAS:</span>
-                        <span class="value">Embedded Systems | Linux | Rust Programming</span>
-                    </div>
-                </div>
-                
-                <div class="command-buttons">
-                    <button class="terminal-btn" data-command="view-projects">
-                        <span class="btn-icon">></span> VIEW_PROJECTS
-                    </button>
-                    <button class="terminal-btn" data-command="download-resume">
-                        <span class="btn-icon">></span> DOWNLOAD_RESUME
-                    </button>
-                    <button class="terminal-btn" data-command="contact-me">
-                        <span class="btn-icon">></span> ESTABLISH_CONTACT
-                    </button>
-                </div>
-            </section>
-            
-            <!-- About Section -->
-            <section id="about" class="content-section">
-                <div class="terminal-output">
-                    <div class="output-line">
-                        <span class="prompt">vaishnav@space-terminal:~$</span>
-                        <span class="command">cat about.md</span>
-                    </div>
-                </div>
-                
-                <div class="file-content">
-                    <div class="file-header">
-                        <span class="file-icon">📄</span>
-                        <span class="file-name">about.md</span>
-                        <span class="file-size">[2.1KB]</span>
-                    </div>
-                    
-                    <div class="markdown-content">
-                        <h2 class="section-title">BIOGRAPHICAL DATA</h2>
-                        
-                        <div class="bio-text">
-                            <p>Hello! I'm Vaishnav, a final-year Electronics and Communication Engineering student with a passion for cutting-edge technology and innovation. I'm dedicated to mastering the latest developments in electronics, embedded systems, and exploring how technology can shape our future.</p>
-                            
-                            <p>My current focus areas include:</p>
-                            <ul class="feature-list">
-                                <li><span class="bullet">></span> Embedded Systems Architecture</li>
-                                <li><span class="bullet">></span> Embedded Software Engineering</li>
-                                <li><span class="bullet">></span> Embedded Linux Systems</li>
-                                <li><span class="bullet">></span> Linux Kernel Development</li>
-                                <li><span class="bullet">></span> Advanced Embedded Programming</li>
-                            </ul>
-                            
-                            <p>I'm particularly interested in the convergence of hardware and software engineering, where innovation creates practical solutions.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Experiences Section -->
-        <section id="experiences" class="content-section">
-          <div class="terminal-output">
-            <div class="output-line">
-              <span class="prompt">vaishnav@space-terminal:~$</span>
-              <span class="command">ls -la /work/experiences/</span>
-            </div>
-          </div>
+    </nav>
 
-          <div class="experiences-container">
-            <div class="experiences-grid">
-              <!-- Depixel Tech Labs -->
-              <div class="experience-card">
-                <div class="experience-header">
-                  <div class="company-info">
-                    <span class="company-icon">🔬</span>
-                    <div class="company-details">
-                      <h3 class="company-name">Depixel Tech</h3>
-                      <p class="position-title">Embedded Systems Development Intern</p>
-                    </div>
-                  </div>
-                  <div class="duration">
-                    <span class="time-badge">Aug 2025 - Oct 2025</span>
-                    <span class="location">Bengaluru, Karnataka</span>
-                  </div>
+    <!-- Hero Section -->
+    <section id="home" class="section hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="hero-title">Vaishnav Sabari Girish</h1>
+                <p class="hero-subtitle">Electronics & Communication Engineering Student</p>
+                <p class="hero-description">
+                    Specializing in embedded systems, Rust programming, and hardware-software integration. 
+                    Building the future of robotics and automation.
+                </p>
+                <div class="hero-meta">
+                    <span class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i> Bangalore, India
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-graduation-cap"></i> Final Year @ Jain University
+                    </span>
                 </div>
-                <div class="experience-description">
-                  <div class="description-text">
-                    <p>Developed embedded firmware for Smart Rings using Zephyr RTOS and Nordic microcontrollers with Embedded Rust.</p>
-                  </div>
-                  <ul class="achievements-list">
-                    <li><span class="bullet">></span> Programmed Nordic Microcontrollers using nRF Connect Extension and Application</li>
-                    <li><span class="bullet">></span> Designed PCB for Smart Rings using KiCad with component placement optimization</li>
-                    <li><span class="bullet">></span> Implemented low-power sleep modes and power management strategies</li>
-                    <li><span class="bullet">></span> Integrated Bluetooth LE protocols for real-time health monitoring</li>
-                    <li><span class="bullet">></span> Mastered Nordic Development Kit for prototyping and debugging</li>
-                  </ul>
-                  <div class="tech-stack">
-                    <span class="tech-tag">Zephyr RTOS</span>
-                    <span class="tech-tag">Embedded Rust</span>
-                    <span class="tech-tag">Nordic nRF52</span>
-                    <span class="tech-tag">KiCad</span>
-                    <span class="tech-tag">Bluetooth LE</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Apsis Solutions -->
-              <div class="experience-card">
-                <div class="experience-header">
-                  <div class="company-info">
-                    <span class="company-icon">🤖</span>
-                    <div class="company-details">
-                      <h3 class="company-name">Apsis Solutions</h3>
-                      <p class="position-title">Embedded Systems Intern</p>
-                    </div>
-                  </div>
-                  <div class="duration">
-                    <span class="time-badge">Jan 2025 - Mar 2025</span>
-                    <span class="location">Bengaluru, Karnataka</span>
-                  </div>
-                </div>
-                <div class="experience-description">
-                  <div class="description-text">
-                    <p>Developed and optimized embedded software solutions focusing on real-time applications and hardware integration.</p>
-                  </div>
-                  <ul class="achievements-list">
-                    <li><span class="bullet">></span> Implemented Machine Learning Computer Vision applications</li>
-                    <li><span class="bullet">></span> Developed Linux scripts using Python and Bash for camera control</li>
-                    <li><span class="bullet">></span> Designed and programmed ESP32-based embedded systems</li>
-                    <li><span class="bullet">></span> Optimized real-time microcontroller applications</li>
-                  </ul>
-                  <div class="tech-stack">
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">Computer Vision</span>
-                    <span class="tech-tag">ESP32</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Linux</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- LiveOut Solutions -->
-              <div class="experience-card">
-                <div class="experience-header">
-                  <div class="company-info">
-                    <span class="company-icon">🎨</span>
-                    <div class="company-details">
-                      <h3 class="company-name">LiveOut Solutions</h3>
-                      <p class="position-title">Prompt Designer Intern</p>
-                    </div>
-                  </div>
-                  <div class="duration">
-                    <span class="time-badge">Jun 2024 - Jul 2024</span>
-                    <span class="location">Bengaluru, Karnataka</span>
-                  </div>
-                </div>
-                <div class="experience-description">
-                  <div class="description-text">
-                    <p>Specialized in AI prompt optimization and visual content creation for marketing and product presentations.</p>
-                  </div>
-                  <ul class="achievements-list">
-                    <li><span class="bullet">></span> Coordinated multiple project timelines using collaborative tools like Asana</li>
-                    <li><span class="bullet">></span> Created and optimized AI prompts improving response quality and accuracy</li>
-                    <li><span class="bullet">></span> Produced high-quality visual content using Leonardo and Ideogram</li>
-                    <li><span class="bullet">></span> Developed professional product mockups using Mockey</li>
-                    <li><span class="bullet">></span> Built customized online stores using Zoho Commerce</li>
-                  </ul>
-                  <div class="tech-stack">
-                    <span class="tech-tag">AI Prompts</span>
-                    <span class="tech-tag">Leonardo AI</span>
-                    <span class="tech-tag">Ideogram</span>
-                    <span class="tech-tag">Zoho Commerce</span>
-                    <span class="tech-tag">Asana</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANTECH Solutions -->
-              <div class="experience-card">
-                <div class="experience-header">
-                  <div class="company-info">
-                    <span class="company-icon">⚡</span>
-                    <div class="company-details">
-                      <h3 class="company-name">PANTECH Solutions</h3>
-                      <p class="position-title">Intern</p>
-                    </div>
-                  </div>
-                  <div class="duration">
-                    <span class="time-badge">Jun 2022 - Jul 2022</span>
-                    <span class="location">Bengaluru, Karnataka</span>
-                  </div>
-                </div>
-                <div class="experience-description">
-                  <div class="description-text">
-                    <p>Foundation-building internship focusing on microcontroller programming and PCB design fundamentals.</p>
-                  </div>
-                  <ul class="achievements-list">
-                    <li><span class="bullet">></span> Programmed STM32-Nucleo Board for embedded applications</li>
-                    <li><span class="bullet">></span> Developed ESP32-based IoT solutions</li>
-                    <li><span class="bullet">></span> Worked with Arduino and ARM-based systems for automation</li>
-                    <li><span class="bullet">></span> Learned PCB layout principles and component placement strategies</li>
-                  </ul>
-                  <div class="tech-stack">
-                    <span class="tech-tag">STM32</span>
-                    <span class="tech-tag">ESP32</span>
-                    <span class="tech-tag">Arduino</span>
-                    <span class="tech-tag">PCB Design</span>
-                    <span class="tech-tag">IoT</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-            
-            <!-- Skills Section -->
-            <section id="skills" class="content-section">
-                <div class="terminal-output">
-                    <div class="output-line">
-                        <span class="prompt">vaishnav@space-terminal:~$</span>
-                        <span class="command">ls -la skills/</span>
-                    </div>
-                </div>
-                
-                <div class="file-listing">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <div class="category-header">
-                                <span class="folder-icon">📁</span>
-                                <span class="category-name">programming_languages</span>
-                            </div>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">C</span>
-                                    <span class="skill-level">███████████░░ 85%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Embedded C</span>
-                                    <span class="skill-level">███████████░░ 80%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Rust</span>
-                                    <span class="skill-level">███████████░░ 85%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Embedded Rust</span>
-                                    <span class="skill-level">███████████░░ 80%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Python</span>
-                                    <span class="skill-level">██████████░░░ 75%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Shell Scripting</span>
-                                    <span class="skill-level">██████████░░░ 75%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <div class="category-header">
-                                <span class="folder-icon">📁</span>
-                                <span class="category-name">tools_systems</span>
-                            </div>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Linux/Embedded Linux</span>
-                                    <span class="skill-level">█████████░░░ 75%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Git/GitHub</span>
-                                    <span class="skill-level">███████████░░ 85%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">NeoVim/Vim</span>
-                                    <span class="skill-level">███████████░░ 85%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">KiCad</span>
-                                    <span class="skill-level">█████████░░░░ 75%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Arduino</span>
-                                    <span class="skill-level">████████████░ 90%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">ESP-IDF</span>
-                                    <span class="skill-level">█████████░░░░ 60%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <div class="category-header">
-                                <span class="folder-icon">📁</span>
-                                <span class="category-name">languages</span>
-                            </div>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">English</span>
-                                    <span class="skill-level">Native</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Japanese (N5)</span>
-                                    <span class="skill-level">███████░░░ 70%</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Tamil</span>
-                                    <span class="skill-level">Native</span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-bullet">></span>
-                                    <span class="skill-name">Kannada</span>
-                                    <span class="skill-level">█████████░░░ 75%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Projects Section -->
-            <section id="projects" class="content-section">
-                <div class="terminal-output">
-                    <div class="output-line">
-                        <span class="prompt">vaishnav@space-terminal:~$</span>
-                        <span class="command">ls -la projects/</span>
-                    </div>
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🔧</span>
-                            <h3 class="project-title">Sbor</h3>
-                            <a href="https://github.com/Vaishnav-Sabari-Girish/sbor" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            A project manager for C inspired by cargo.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">CLI</span>
-                            <span class="tag">project-management</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🦀</span>
-                            <h3 class="project-title">Hayasen</h3>
-                            <a href="https://github.com/Vaishnav-Sabari-Girish/Hayasen" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            A Unified Sensor Interface library Crate written in Embedded Rust for no_std environments.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Rust</span>
-                            <span class="tag">Embedded</span>
-                            <span class="tag">Sensors</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">💻</span>
-                            <h3 class="project-title">ComChan</h3>
-                            <a href="https://github.com/Vaishnav-Sabari-Girish/ComChan" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            A blazingly fast and cross-platform serial monitor written in Rust for embedded systems.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Rust</span>
-                            <span class="tag">Serial</span>
-                            <span class="tag">Cross-platform</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">⚡</span>
-                            <h3 class="project-title">Arduino CLI Interactive (aci)</h3>
-                            <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            A command-line interface tool that makes Arduino development more interactive and user-friendly.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Bash</span>
-                            <span class="tag">TUI</span>
-                            <span class="tag">Arduino</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🔒</span>
-                            <h3 class="project-title">Smart door lock using Li-Fi</h3>
-                            <a href="https://codeberg.org/Vaishnav-Sabari-Girish/SmartDoorLockUsingLi-Fi" class="project-link" target="_blank">
-                                <i class="fas fa-code-branch"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            Innovative door lock system using Light Fidelity (Li-Fi) technology for secure access control.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Li-Fi</span>
-                            <span class="tag">Security</span>
-                            <span class="tag">IoT</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🔧</span>
-                            <h3 class="project-title">Embedded Rust Collection</h3>
-                            <a href="https://github.com/Vaishnav-Sabari-Girish/Embedded-Rust" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            Collection of Embedded Rust programs for BBC MicroBit V2 and ESP32 microcontrollers.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">Rust</span>
-                            <span class="tag">Embedded</span>
-                            <span class="tag">Baremetal</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">💧</span>
-                            <h3 class="project-title">Water Purity Tester</h3>
-                            <a href="https://set.jainuniversity.ac.in/academics/electronics-and-communications/pdf/development-activities/portable-water-purity-tester.pdf" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            Portable device for testing water quality parameters using IoT sensors and real-time monitoring.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Sensors</span>
-                            <span class="tag">Hardware</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-header">
-                            <span class="project-icon">🌱</span>
-                            <h3 class="project-title">Smart Farm Monitoring System</h3>
-                            <a href="https://codeberg.org/Vaishnav-Sabari-Girish/fieldmonitoringsystem.git" class="project-link" target="_blank">
-                                <i class="fas fa-code-branch"></i>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            Portable device for testing water quality parameters using IoT sensors and real-time monitoring.
-                        </div>
-                        <div class="project-tags">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Sensors</span>
-                            <span class="tag">Hardware</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Contact Section -->
-            <section id="contact" class="content-section">
-                <div class="terminal-output">
-                    <div class="output-line">
-                        <span class="prompt">vaishnav@space-terminal:~$</span>
-                        <span class="command">cat /etc/contact.conf</span>
-                    </div>
-                </div>
-                
-                <div class="contact-info">
-                    <div class="contact-header">
-                        <h2 class="section-title">ESTABLISH COMMUNICATION LINK</h2>
-                        <div class="status-indicator">
-                            <span class="status-dot"></span>
-                            <span class="status-text">All communication channels operational</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-grid">
-                        <div class="contact-item">
-                            <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="contact-link">
-                                <i class="fab fa-github contact-icon"></i>
-                                <div class="contact-content">
-                                    <span class="contact-label">GitHub</span>
-                                    <span class="contact-value">Vaishnav-Sabari-Girish</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <a href="https://www.linkedin.com/in/vaishnav-sabari-girish" target="_blank" class="contact-link">
-                                <i class="fab fa-linkedin contact-icon"></i>
-                                <div class="contact-content">
-                                    <span class="contact-label">LinkedIn</span>
-                                    <span class="contact-value">Professional Network</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <a href="https://t.me/vaishnavdev" target="_blank" class="contact-link">
-                                <i class="fab fa-telegram contact-icon"></i>
-                                <div class="contact-content">
-                                    <span class="contact-label">Telegram</span>
-                                    <span class="contact-value">@vaishnavdev</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <a href="https://elk.zone/defcon.social/@vaishnav" target="_blank" class="contact-link">
-                                <i class="fab fa-mastodon contact-icon"></i>
-                                <div class="contact-content">
-                                    <span class="contact-label">Mastodon (elk.zone)</span>
-                                    <span class="contact-value">@vaishnav</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <a href="https://bsky.app/profile/vaishnav-dev.bsky.social" target="_blank" class="contact-link">
-                                <i class="fa-brands fa-bluesky contact-icon"></i>
-                                <div class="contact-content">
-                                    <span class="contact-label">Bluesky</span>
-                                    <span class="contact-value">@vaishnav-dev</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-item resume-item">
-                            <a href="https://vaishnav.world/Resume" target="_blank" class="contact-link resume-link">
-                                <i class="fas fa-file-pdf contact-icon"></i>
-                                <div class="contact-content">
-                                    <span class="contact-label">Resume</span>
-                                    <span class="contact-value">Download PDF</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-        <!-- Terminal footer -->
-        <footer class="terminal-footer">
-            <div class="footer-content">
-                <div class="system-info">
-                    <span class="info-item">SYSTEM: SPACE_TERMINAL_v2.1.0</span>
-                    <span class="info-item">STATUS: OPERATIONAL</span>
-                    <span class="info-item">UPTIME: <span id="uptime">00:00:00</span></span>
-                </div>
-                <div class="copyright">
-                    <span>&copy; 2025 VAISHNAV SABARI GIRISH - ALL RIGHTS RESERVED</span>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="https://vaishnav.world/Resume/VaishnavSabariGirish_Resume.pdf" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Resume
+                    </a>
                 </div>
             </div>
-        </footer>
-    </div>
-    
-    <!-- Custom JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a final-year Electronics and Communication Engineering student with a passion for 
+                        cutting-edge technology and innovation. My focus is on mastering embedded systems, 
+                        real-time operating systems, and exploring how technology shapes our future.
+                    </p>
+                    <h3 class="subsection-title">Current Focus Areas</h3>
+                    <ul class="focus-list">
+                        <li>Embedded Systems Architecture</li>
+                        <li>Embedded Software Engineering</li>
+                        <li>Embedded Linux Systems</li>
+                        <li>Linux Kernel Development</li>
+                        <li>Advanced Rust Programming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="company">Depixel Tech</h3>
+                                <p class="role">Embedded Systems Development Intern</p>
+                            </div>
+                            <div class="experience-meta">
+                                <span class="date">Aug 2025 - Oct 2025</span>
+                                <span class="location">Bengaluru, Karnataka</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Developed embedded firmware for Smart Rings using Zephyr RTOS and Nordic microcontrollers 
+                            with Embedded Rust.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Programmed Nordic Microcontrollers using nRF Connect Extension and Application</li>
+                            <li>Designed PCB for Smart Rings using KiCad with component placement optimization</li>
+                            <li>Implemented low-power sleep modes and power management strategies</li>
+                            <li>Integrated Bluetooth LE protocols for real-time health monitoring</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Zephyr RTOS</span>
+                            <span class="tag">Embedded Rust</span>
+                            <span class="tag">Nordic nRF52</span>
+                            <span class="tag">KiCad</span>
+                            <span class="tag">Bluetooth LE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="company">Apsis Solutions</h3>
+                                <p class="role">Embedded Systems Intern</p>
+                            </div>
+                            <div class="experience-meta">
+                                <span class="date">Jan 2025 - Mar 2025</span>
+                                <span class="location">Bengaluru, Karnataka</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Developed and optimized embedded software solutions focusing on real-time applications 
+                            and hardware integration.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Implemented Machine Learning Computer Vision applications</li>
+                            <li>Developed Linux scripts using Python and Bash for camera control</li>
+                            <li>Designed and programmed ESP32-based embedded systems</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">ESP32</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="company">LiveOut Solutions</h3>
+                                <p class="role">Prompt Designer Intern</p>
+                            </div>
+                            <div class="experience-meta">
+                                <span class="date">Jun 2024 - Jul 2024</span>
+                                <span class="location">Bengaluru, Karnataka</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Specialized in AI prompt optimization and visual content creation for marketing and 
+                            product presentations.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Created and optimized AI prompts improving response quality</li>
+                            <li>Produced high-quality visual content using Leonardo and Ideogram</li>
+                            <li>Built customized online stores using Zoho Commerce</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">AI Prompts</span>
+                            <span class="tag">Leonardo AI</span>
+                            <span class="tag">Zoho Commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="company">PANTECH Solutions</h3>
+                                <p class="role">Intern</p>
+                            </div>
+                            <div class="experience-meta">
+                                <span class="date">Jun 2022 - Jul 2022</span>
+                                <span class="location">Bengaluru, Karnataka</span>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Foundation-building internship focusing on microcontroller programming and PCB design fundamentals.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Programmed STM32-Nucleo Board for embedded applications</li>
+                            <li>Developed ESP32-based IoT solutions</li>
+                            <li>Learned PCB layout principles and component placement strategies</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">STM32</span>
+                            <span class="tag">ESP32</span>
+                            <span class="tag">PCB Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Embedded C</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Rust</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Embedded Rust</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Shell Scripting</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Systems</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux/Embedded Linux</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git/GitHub</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">NeoVim/Vim</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">KiCad</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Arduino</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">ESP-IDF</span>
+                                <span class="skill-percent">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-item language-skill">
+                            <div class="skill-info">
+                                <span class="skill-name">English</span>
+                                <span class="skill-percent">Native</span>
+                            </div>
+                        </div>
+                        <div class="skill-item language-skill">
+                            <div class="skill-info">
+                                <span class="skill-name">Japanese (N5)</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item language-skill">
+                            <div class="skill-info">
+                                <span class="skill-name">Tamil</span>
+                                <span class="skill-percent">Native</span>
+                            </div>
+                        </div>
+                        <div class="skill-item language-skill">
+                            <div class="skill-info">
+                                <span class="skill-name">Kannada</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/sbor.png" alt="Sbor" onerror="this.parentElement.innerHTML='🔧'">
+                    </div>
+                    <h3 class="project-title">Sbor</h3>
+                    <p class="project-description">
+                        A project manager for C inspired by cargo.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">CLI</span>
+                        <span class="tag">Project Management</span>
+                    </div>
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/sbor" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/hayasen.png" alt="Hayasen" onerror="this.parentElement.innerHTML='🦀'">
+                    </div>
+                    <h3 class="project-title">Hayasen</h3>
+                    <p class="project-description">
+                        A Unified Sensor Interface library Crate written in Embedded Rust for no_std environments.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Rust</span>
+                        <span class="tag">Embedded</span>
+                        <span class="tag">Sensors</span>
+                    </div>
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/Hayasen" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/comchan.png" alt="ComChan" onerror="this.parentElement.innerHTML='💻'">
+                    </div>
+                    <h3 class="project-title">ComChan</h3>
+                    <p class="project-description">
+                        A blazingly fast and cross-platform serial monitor written in Rust for embedded systems.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Rust</span>
+                        <span class="tag">Serial</span>
+                        <span class="tag">Cross-platform</span>
+                    </div>
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/ComChan" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/arduino-cli-interactive.png" alt="Arduino CLI Interactive" onerror="this.parentElement.innerHTML='⚡'">
+                    </div>
+                    <h3 class="project-title">Arduino CLI Interactive</h3>
+                    <p class="project-description">
+                        A command-line interface tool that makes Arduino development more interactive and user-friendly.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Bash</span>
+                        <span class="tag">TUI</span>
+                        <span class="tag">Arduino</span>
+                    </div>
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/smart-door-lock.png" alt="Smart Door Lock" onerror="this.parentElement.innerHTML='🔒'">
+                    </div>
+                    <h3 class="project-title">Smart Door Lock using Li-Fi</h3>
+                    <p class="project-description">
+                        Innovative door lock system using Light Fidelity (Li-Fi) technology for secure access control.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Li-Fi</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">IoT</span>
+                    </div>
+                    <a href="https://codeberg.org/Vaishnav-Sabari-Girish/Smart_Door_Lock_Using_Li-Fi" target="_blank" class="project-link">
+                        <i class="fas fa-code-branch"></i> View Source
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/water-purity-tester.png" alt="Water Purity Tester" onerror="this.parentElement.innerHTML='💧'">
+                    </div>
+                    <h3 class="project-title">Water Purity Tester</h3>
+                    <p class="project-description">
+                        Portable device for testing water quality parameters using IoT sensors and real-time monitoring.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Sensors</span>
+                        <span class="tag">Hardware</span>
+                    </div>
+                    <a href="https://set.jainuniversity.ac.in/academics/electronics-and-communications/pdf/development-activities/portable-water-purity-tester.pdf" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Documentation
+                    </a>
+                </div>
+          <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <img src="assets/field-monitoring-system.png" alt="Field monitoring system" onerror="this.parentElement.innerHTML='💧'">
+                    </div>
+                    <h3 class="project-title">Field Monitoring system</h3>
+                    <p class="project-description">
+                        A project to make field monitoring a breeze .
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Sensors</span>
+                        <span class="tag">Hardware</span>
+                    </div>
+                    <a href="https://codeberg.org/Vaishnav-Sabari-Girish/field_monitoring_system" target="_blank" class="project-link">
+                        <i class="fas fa-code-branch"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+                Feel free to reach out for collaborations, opportunities, or just a chat about embedded systems and technology.
+            </p>
+
+            <div class="contact-grid">
+                <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Vaishnav-Sabari-Girish</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/vaishnav-sabari-girish" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Professional Network</p>
+                </a>
+
+                <a href="https://t.me/vaishnav_dev" target="_blank" class="contact-card">
+                    <i class="fab fa-telegram"></i>
+                    <h3>Telegram</h3>
+                    <p>@vaishnav_dev</p>
+                </a>
+
+                <a href="https://elk.zone/defcon.social/@vaishnav" target="_blank" class="contact-card">
+                    <i class="fab fa-mastodon"></i>
+                    <h3>Mastodon</h3>
+                    <p>@vaishnav</p>
+                </a>
+
+                <a href="https://bsky.app/profile/vaishnav-dev.bsky.social" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-bluesky"></i>
+                    <h3>Bluesky</h3>
+                    <p>@vaishnav-dev</p>
+                </a>
+
+                <a href="https://vaishnav.world/Resume" target="_blank" class="contact-card resume-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Resume</h3>
+                    <p>View Resume</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vaishnav Sabari Girish. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
