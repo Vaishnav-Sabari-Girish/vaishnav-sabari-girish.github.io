@@ -386,8 +386,9 @@ body {
     gap: var(--spacing-sm);
 }
 
+/* FIXED: Better bullet alignment */
 .focus-list li {
-    padding-left: var(--spacing-md);
+    padding-left: 1.25rem;
     position: relative;
     color: var(--text-secondary);
 }
@@ -442,13 +443,7 @@ body {
     padding: var(--spacing-lg);
     border-radius: 12px;
     border: 1px solid var(--border);
-    transition: var(--transition-base);
-}
-
-.timeline-content:hover {
-    border-color: var(--accent);
-    box-shadow: var(--shadow-md);
-    transform: translateX(4px);
+    /* REMOVED: Hover effects on non-clickable elements */
 }
 
 .experience-header {
@@ -503,9 +498,10 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
+/* FIXED: Better bullet alignment */
 .experience-highlights li {
     position: relative;
-    padding-left: var(--spacing-md);
+    padding-left: 1.25rem;
     margin-bottom: 0.5rem;
     color: var(--text-secondary);
     font-size: 0.95rem;
@@ -561,54 +557,22 @@ body {
 .skill-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
 }
 
+/* UPDATED: Simplified skill items without percentages */
 .skill-item {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .skill-name {
     font-weight: 500;
     color: var(--text-primary);
+    font-size: 1rem;
 }
 
-.skill-percent {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-}
-
-.skill-bar {
-    height: 6px;
-    background: var(--bg-primary);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
-    border-radius: 3px;
-    transition: width 1s ease;
-}
-
-/* Language skills - no progress bars */
-.skill-item.language-skill .skill-bar {
-    display: none;
-}
-
-.skill-item.language-skill .skill-info {
-    margin-bottom: 0;
-}
+/* REMOVED: Percentage and progress bar styles are no longer needed */
 
 /* ==============================================
    PROJECTS SECTION
@@ -659,7 +623,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Fallback styling if image fails to load */
 .project-icon:empty::before {
     content: '🖼️';
     font-size: 3rem;
@@ -891,19 +854,16 @@ body {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Smooth scroll offset for fixed navbar */
 section {
     scroll-margin-top: 80px;
 }
 
-/* Focus styles for accessibility */
 a:focus,
 button:focus {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
