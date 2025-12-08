@@ -386,7 +386,6 @@ body {
     gap: var(--spacing-sm);
 }
 
-/* FIXED: Better bullet alignment */
 .focus-list li {
     padding-left: 1.25rem;
     position: relative;
@@ -443,7 +442,6 @@ body {
     padding: var(--spacing-lg);
     border-radius: 12px;
     border: 1px solid var(--border);
-    /* REMOVED: Hover effects on non-clickable elements */
 }
 
 .experience-header {
@@ -498,7 +496,6 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-/* FIXED: Better bullet alignment */
 .experience-highlights li {
     position: relative;
     padding-left: 1.25rem;
@@ -531,48 +528,260 @@ body {
 }
 
 /* ==============================================
-   SKILLS SECTION
+   SKILLS SECTION - WITH LANGUAGE FLAGS
    ============================================== */
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
+.skills-container {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.skill-category {
-    background: var(--bg-tertiary);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border: 1px solid var(--border);
+.skill-section {
+    margin-bottom: var(--spacing-xl);
 }
 
-.category-title {
+.skill-section:last-child {
+    margin-bottom: 0;
+}
+
+.skill-section-title {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
 }
 
-.skill-list {
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.skill-icons i {
+    font-size: 3rem;
+    color: var(--accent);
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.skill-icons i:hover {
+    transform: translateY(-4px) scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Devicon specific colors will show through with 'colored' class */
+.skill-icons [class*="devicon-"].colored {
+    color: inherit;
+}
+
+/* Font Awesome icons for tools without devicons */
+.skill-icons .fa-microchip {
+    color: var(--accent);
+}
+
+/* Language Icons with Flags and Text */
+.language-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+}
+
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: var(--transition-base);
+    cursor: default;
+}
+
+.language-item:hover {
+    transform: translateY(-4px);
+}
+
+.language-flag {
+    width: 64px;
+    height: 48px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+    display: block;
+    border: 1px solid var(--border);
+}
+
+.language-item:hover .language-flag {
+    box-shadow: var(--shadow-md);
+    transform: scale(1.05);
+}
+
+.language-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+.language-level {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* ==============================================
+   HACKATHONS & EVENTS SECTION
+   ============================================== */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.event-card {
+    background: var(--bg-tertiary);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: var(--transition-base);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
 }
 
-/* UPDATED: Simplified skill items without percentages */
-.skill-item {
-    display: flex;
-    align-items: center;
+.event-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
-.skill-name {
-    font-weight: 500;
+.event-card.highlight {
+    border: 2px solid var(--yellow);
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, rgba(238, 212, 159, 0.05) 100%);
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-name {
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--text-primary);
+    flex: 1;
+}
+
+.event-type {
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.event-type.hackathon {
+    background: var(--mauve);
+    color: var(--bg-primary);
+}
+
+.event-type.exhibition {
+    background: var(--blue);
+    color: var(--bg-primary);
+}
+
+.event-date {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+}
+
+.event-date i {
+    color: var(--accent);
+}
+
+.event-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-top: var(--spacing-xs);
+}
+
+.event-achievement {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-primary);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin-top: var(--spacing-sm);
+}
+
+.event-achievement i {
+    color: var(--accent-secondary);
     font-size: 1rem;
 }
 
-/* REMOVED: Percentage and progress bar styles are no longer needed */
+.event-achievement span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.highlight-achievement {
+    background: rgba(238, 212, 159, 0.1);
+    border-color: var(--yellow);
+}
+
+.highlight-achievement i {
+    color: var(--yellow);
+}
+
+.highlight-achievement span {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.event-project {
+    margin-top: var(--spacing-sm);
+}
+
+.project-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-primary);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+.project-badge:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: translateX(4px);
+}
+
+.project-badge i {
+    font-size: 0.875rem;
+}
 
 /* ==============================================
    PROJECTS SECTION
@@ -592,12 +801,28 @@ body {
     transition: var(--transition-base);
     display: flex;
     flex-direction: column;
+    scroll-margin-top: 100px;
 }
 
 .project-card:hover {
     border-color: var(--accent);
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
+}
+
+.project-card:target {
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px rgba(238, 212, 159, 0.2);
+    animation: highlight-pulse 1s ease-in-out;
+}
+
+@keyframes highlight-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 3px rgba(238, 212, 159, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(238, 212, 159, 0.3);
+    }
 }
 
 .project-icon {
@@ -808,6 +1033,27 @@ body {
     .timeline-item {
         padding-left: var(--spacing-lg);
     }
+
+    .skill-icons {
+        gap: var(--spacing-md);
+    }
+
+    .skill-icons i {
+        font-size: 2.5rem;
+    }
+
+    .language-icons {
+        gap: var(--spacing-md);
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-header {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
 }
 
 @media (max-width: 480px) {
@@ -832,6 +1078,15 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-icons i {
+        font-size: 2rem;
+    }
+
+    .language-flag {
+        width: 56px;
+        height: 42px;
     }
 }
 

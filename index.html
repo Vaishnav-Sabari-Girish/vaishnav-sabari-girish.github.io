@@ -13,6 +13,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- Devicons for programming language icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Flag Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -33,6 +39,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -233,69 +240,56 @@
         <div class="container">
             <h2 class="section-title">Skills & Technologies</h2>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">C</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Embedded C</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Rust</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Embedded Rust</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Shell Scripting</span>
-                        </div>
+            <div class="skills-container">
+                <!-- Programming Languages -->
+                <div class="skill-section">
+                    <h3 class="skill-section-title">Programming Languages</h3>
+                    <div class="skill-icons">
+                        <i class="devicon-c-plain colored" title="C"></i>
+                        <i class="devicon-embeddedc-plain colored" title="Embedded C"></i>
+                        <i class="devicon-rust-plain colored" title="Rust"></i>
+                        <i class="devicon-rust-plain colored" title="Embedded Rust"></i>
+                        <i class="devicon-python-plain colored" title="Python"></i>
+                        <i class="devicon-bash-plain colored" title="Shell Scripting"></i>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3 class="category-title">Tools & Systems</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Linux/Embedded Linux</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Git/GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">NeoVim/Vim</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">KiCad</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Arduino</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">ESP-IDF</span>
-                        </div>
+                <!-- Tools & Systems -->
+                <div class="skill-section">
+                    <h3 class="skill-section-title">Tools & Systems</h3>
+                    <div class="skill-icons">
+                        <i class="devicon-linux-plain colored" title="Linux/Embedded Linux"></i>
+                        <i class="devicon-git-plain colored" title="Git/GitHub"></i>
+                        <i class="devicon-vim-plain colored" title="NeoVim/Vim"></i>
+                        <i class="fas fa-microchip" title="KiCad"></i>
+                        <i class="devicon-arduino-plain colored" title="Arduino"></i>
+                        <i class="fas fa-microchip" title="ESP-IDF"></i>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3 class="category-title">Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">English (Native)</span>
+                <!-- Spoken Languages -->
+                <div class="skill-section">
+                    <h3 class="skill-section-title">Languages</h3>
+                    <div class="language-icons">
+                        <div class="language-item">
+                            <span class="fi fi-us language-flag"></span>
+                            <span class="language-name">English</span>
+                            <span class="language-level">Native</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Japanese (N5)</span>
+                        <div class="language-item">
+                            <span class="fi fi-jp language-flag"></span>
+                            <span class="language-name">Japanese</span>
+                            <span class="language-level">N5</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Tamil (Native)</span>
+                        <div class="language-item">
+                            <span class="fi fi-in language-flag"></span>
+                            <span class="language-name">Tamil</span>
+                            <span class="language-level">Native</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Kannada</span>
+                        <div class="language-item">
+                            <span class="fi fi-in language-flag"></span>
+                            <span class="language-name">Kannada</span>
+                            <span class="language-level">Fluent</span>
                         </div>
                     </div>
                 </div>
@@ -303,8 +297,136 @@
         </div>
     </section>
 
+    <!-- Hackathons & Events Section -->
+    <section id="events" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Hackathons & Events</h2>
+            <p class="section-subtitle">
+                Technical competitions and exhibitions showcasing innovative solutions and embedded systems projects.
+            </p>
+
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-header">
+                        <h3 class="event-name">Technocognition '25</h3>
+                        <span class="event-type hackathon">36 Hour Protothon</span>
+                    </div>
+                    <p class="event-date">
+                        <i class="fas fa-calendar-alt"></i> 21-22 November 2025
+                    </p>
+                    <p class="event-description">
+                        Developed an Innovative Elderly Monitoring System during an intensive 36-hour prototyping competition.
+                    </p>
+                    <div class="event-achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Participated</span>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-header">
+                        <h3 class="event-name">Techathon</h3>
+                        <span class="event-type hackathon">Hackathon</span>
+                    </div>
+                    <p class="event-date">
+                        <i class="fas fa-calendar-alt"></i> 27 October 2024
+                    </p>
+                    <p class="event-description">
+                        Showcased innovative access control solution using Light Fidelity (Li-Fi) technology.
+                    </p>
+                    <div class="event-project">
+                        <a href="#project-smart-door" class="project-badge">
+                            <i class="fas fa-link"></i> Smart Door Lock using Li-Fi
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card highlight">
+                    <div class="event-header">
+                        <h3 class="event-name">Nexus Hackathon</h3>
+                        <span class="event-type hackathon">Hackathon</span>
+                    </div>
+                    <p class="event-date">
+                        <i class="fas fa-calendar-alt"></i> 30-31 July 2024
+                    </p>
+                    <p class="event-description">
+                        Presented comprehensive IoT solution for agricultural field monitoring with real-time sensor data.
+                    </p>
+                    <div class="event-achievement highlight-achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Top 10 out of 168 teams</span>
+                    </div>
+                    <div class="event-project">
+                        <a href="#project-field-monitor" class="project-badge">
+                            <i class="fas fa-link"></i> Field Monitoring System
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card">
+                    <div class="event-header">
+                        <h3 class="event-name">Industry and Academic Confab</h3>
+                        <span class="event-type exhibition">Exhibition</span>
+                    </div>
+                    <p class="event-date">
+                        <i class="fas fa-calendar-alt"></i> 19-21 March 2024
+                    </p>
+                    <p class="event-description">
+                        Demonstrated advanced IoT sensor integration and data collection techniques for agricultural applications.
+                    </p>
+                    <div class="event-project">
+                        <a href="#project-field-monitor" class="project-badge">
+                            <i class="fas fa-link"></i> Field Monitoring System
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card">
+                    <div class="event-header">
+                        <h3 class="event-name">Anveshana Project Exhibition</h3>
+                        <span class="event-type exhibition">Exhibition</span>
+                    </div>
+                    <p class="event-date">
+                        <i class="fas fa-calendar-alt"></i> 27-28 February 2024
+                    </p>
+                    <p class="event-description">
+                        Exhibited embedded systems project focused on automated field monitoring and sensor data processing.
+                    </p>
+                    <div class="event-project">
+                        <a href="#project-field-monitor" class="project-badge">
+                            <i class="fas fa-link"></i> Field Monitoring System
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card">
+                    <div class="event-header">
+                        <h3 class="event-name">Electrothon 2023</h3>
+                        <span class="event-type hackathon">Hackathon</span>
+                    </div>
+                    <p class="event-date">
+                        <i class="fas fa-calendar-alt"></i> 18 April 2023
+                    </p>
+                    <p class="event-description">
+                        Participated in electronics-focused hackathon, gaining experience in rapid prototyping and collaborative development.
+                    </p>
+                    <div class="event-achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Participated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="section section-alt">
+    <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
 
@@ -386,7 +508,7 @@
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card">
+                <div class="project-card" id="project-smart-door">
                     <div class="project-icon">
                         <img src="assets/smart-door-lock.png" alt="Smart Door Lock" onerror="this.parentElement.innerHTML='🔒'">
                     </div>
@@ -424,18 +546,18 @@
                 </div>
 
                 <!-- Project 7 -->
-                <div class="project-card">
+                <div class="project-card" id="project-field-monitor">
                     <div class="project-icon">
-                        <img src="assets/field-monitoring-system.png" alt="Field monitoring system" onerror="this.parentElement.innerHTML='💧'">
+                        <img src="assets/field-monitoring-system.png" alt="Field monitoring system" onerror="this.parentElement.innerHTML='🌾'">
                     </div>
-                    <h3 class="project-title">Field Monitoring system</h3>
+                    <h3 class="project-title">Field Monitoring System</h3>
                     <p class="project-description">
-                        A project to make field monitoring a breeze.
+                        Comprehensive IoT solution for agricultural monitoring with real-time sensor data collection and analysis.
                     </p>
                     <div class="project-tags">
                         <span class="tag">IoT</span>
                         <span class="tag">Sensors</span>
-                        <span class="tag">Hardware</span>
+                        <span class="tag">Agriculture</span>
                     </div>
                     <a href="https://codeberg.org/Vaishnav-Sabari-Girish/field_monitoring_system" target="_blank" class="project-link">
                         <i class="fas fa-code-branch"></i> View Repository
@@ -446,7 +568,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-subtitle">
