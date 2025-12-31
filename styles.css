@@ -513,3 +513,98 @@ body {
         text-align: center;
     }
 }
+
+/* ===========================
+   Terminal Callout Styles
+   =========================== */
+.terminal-callout {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 2rem 0;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-header {
+    background-color: var(--bg-secondary);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--border);
+}
+
+.terminal-dot:nth-child(1) {
+    background-color: #f38ba8;
+}
+
+.terminal-dot:nth-child(2) {
+    background-color: #f9e2af;
+}
+
+.terminal-dot:nth-child(3) {
+    background-color: #a6e3a1;
+}
+
+.terminal-title {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.terminal-body {
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+}
+
+.terminal-prompt {
+    color: var(--accent);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.terminal-command {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    user-select: all;
+    cursor: text;
+    word-break: break-all;
+}
+
+.terminal-command:hover {
+    color: var(--accent-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .terminal-callout {
+        max-width: 100%;
+    }
+
+    .terminal-body {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .terminal-command {
+        font-size: 0.85rem;
+    }
+}
+
