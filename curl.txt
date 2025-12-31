@@ -1,0 +1,125 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║                   VAISHNAV SABARI GIRISH (VSG)                    ║
+║                    Embedded Systems Engineer                      ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────┐
+│ ABOUT                                                             │
+└───────────────────────────────────────────────────────────────────┘
+
+  Final-year Electronics & Communication Engineering student with
+  solid foundation in Embedded Systems, Linux, and programming.
+
+  📍 Location: Bengaluru, India
+  🎓 Education: B.Tech ECE @ Jain University (CGPA: 8.2)
+  💼 Role: Ex-Vice-Treasurer @ Evalanche Club
+
+┌───────────────────────────────────────────────────────────────────┐
+│ TECHNICAL EXPERTISE                                               │
+└───────────────────────────────────────────────────────────────────┘
+
+  Languages               : C, C++, Python, Rust, Bash, Lua, MATLAB
+  Embedded                : Arduino, ESP32, STM32, Nordic nRF52
+  RTOS                    : Zephyr RTOS
+  Communication Protocols : I2C, SPI, UART
+  Wireless Protocols      : Bluetooth LE, ESP-NOW, Li-Fi, Wi-Fi
+  Tools                   : KiCad, Proteus, PlatformIO, ESP-IDF
+  Platforms               : Linux (various distributions), Embedded Linux
+
+┌───────────────────────────────────────────────────────────────────┐
+│ PROFESSIONAL EXPERIENCE                                           │
+└───────────────────────────────────────────────────────────────────┘
+
+  🔧 Depixel Tech | Embedded Systems Development Intern
+     Aug 2025 - Nov 2025 | Bengaluru
+     • Zephyr RTOS & Nordic microcontrollers
+     • Bluetooth LE with Embedded Rust
+     • PCB design for wearable IoT devices
+
+  🔧 Apsis Solutions | Embedded Systems Intern
+     Jan 2025 - Mar 2025 | Bengaluru
+     • ESP32 IoT automation
+     • Real-time applications in C, Python, Bash
+
+  🔧 LiveOut Solutions | Prompt Designer Intern
+     Jun 2024 - Jul 2024 | Bengaluru
+     • AI-powered prototypes
+     • E-commerce development (Zoho Commerce)
+
+  🔧 PANTECH Solutions | Intern
+     Jun 2022 - Jul 2022 | Bengaluru
+     • STM32 & ESP32 programming
+     • ARM Cortex-M fundamentals
+
+┌───────────────────────────────────────────────────────────────────┐
+│ FEATURED PROJECTS                                                 │
+└───────────────────────────────────────────────────────────────────┘
+
+  • Hayasen
+    Unified sensor interface library in Embedded Rust
+    → https://github.com/Vaishnav-Sabari-Girish/hayasen
+
+  • ComChan Serial Monitor
+    Blazingly fast serial monitor with plotting & data logging
+    → https://github.com/Vaishnav-Sabari-Girish/comchan
+
+  • Sbor
+    Project manager for C, inspired by Cargo
+    → https://github.com/Vaishnav-Sabari-Girish/sbor
+
+  • Arduino Interactive CLI
+    TUI tool for Arduino CLI beginners
+
+  • Remote Field Monitoring System
+    ESP-NOW based IoT solution for farmers (ThingSpeak)
+
+  • Portable Water Purity Tester
+    ⭐ PATENTED | Patent No: 202341087033 A
+    On-the-go water quality testing device
+
+  • Wireless Water Level Monitor
+    Community safety project for tank maintenance
+
+  • Smart Door Lock using Li-Fi
+    Innovative security system using phone flashlight
+
+┌───────────────────────────────────────────────────────────────────┐
+│ CERTIFICATIONS & ACHIEVEMENTS                                     │
+└───────────────────────────────────────────────────────────────────┘
+
+  📜 C Programming for Embedded Applications (LinkedIn Learning)
+  📜 Microcontroller Embedded C Programming (Udemy)
+  📜 Digital Signal Processing 1 & 2 (EPFL)
+  📜 VLSI SoC Design using Verilog HDL (Maven Silicon)
+  📄 Publication: Star Location Pointer using MATLAB (2023)
+
+┌───────────────────────────────────────────────────────────────────┐
+│ LANGUAGES                                                         │
+└───────────────────────────────────────────────────────────────────┘
+
+  🗣️  English, Japanese, Tamil, Kannada, Hindi
+
+┌───────────────────────────────────────────────────────────────────┐
+│ CONNECT WITH ME                                                   │
+└───────────────────────────────────────────────────────────────────┘
+
+  🌐 Website:  https://vaishnav.world
+  🐙 GitHub:   https://github.com/Vaishnav-Sabari-Girish
+  💼 LinkedIn: https://linkedin.com/in/vaishnav-sabari-girish
+  ✉️  Email:    write2vaichu@gmail.com
+
+───────────────────────────────────────────────────────────────────
+
+  💡 Tip: Visit https://vaishnav.world in your browser for the
+           full interactive portfolio!
+
+  📄 curl https://vaishnav.world/VaishnavSabariGirish_Resume.pdf
+     to download my resume
+
+───────────────────────────────────────────────────────────────────
+
+  "Building embedded systems one bit at a time 🚀"
+
