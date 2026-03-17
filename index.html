@@ -3,273 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnav Sabari Girish | Embedded Systems Engineer</title>
-    <meta name="description" content="Electronics Engineering student specializing in embedded systems and Rust programming">
+    <title>VSG // Vaishnav Sabari Girish</title>
+    <meta name="description" content="Embedded Systems Engineer — Rust, Linux, low-level systems">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700;900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">VSG</a>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Scanline overlay -->
+    <div class="scanlines" aria-hidden="true"></div>
+    <!-- CRT flicker overlay -->
+    <div class="crt-flicker" aria-hidden="true"></div>
+    <!-- Noise texture -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">[</span>VSG<span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span class="status-text" id="statusText">ONLINE</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-index="00">HOME</a></li>
+                <li><a href="#about" class="nav-link" data-index="01">ABOUT</a></li>
+                <li><a href="#experience" class="nav-link" data-index="02">EXP</a></li>
+                <li><a href="#projects" class="nav-link" data-index="03">PROJECTS</a></li>
+                <li><a href="#contact" class="nav-link" data-index="04">CONTACT</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <!-- Hero Section -->
+        <!-- ═══ HERO ═══ -->
         <section id="home" class="hero">
             <div class="container">
+                <div class="hero-top-bar">
+                    <span class="top-bar-label">SYS://PORTFOLIO_v2.1</span>
+                    <span class="top-bar-label">BOOT OK</span>
+                </div>
+
                 <div class="hero-content">
-                    <h1 class="hero-title">Vaishnav Sabari Girish</h1>
-                    <p class="hero-subtitle">Embedded Systems Engineer</p>
-                    <p class="hero-description">
-                        Building the future of robotics with Rust, Linux, and low-level systems programming
-                    </p>
-                    <div class="hero-meta">
-                        <span>📍 Bengaluru, India → Japan</span>
-                        <span>🎓 Electronics Engineering @ Jain University</span>
+                    <div class="hero-prefix">
+                        <span class="prefix-line">$ whoami</span>
+                    </div>
+                    <h1 class="hero-name">
+                        <span class="name-line" id="heroName"></span>
+                        <span class="cursor-blink">█</span>
+                    </h1>
+                    <div class="hero-role">
+                        <span class="role-label">// ROLE &nbsp;&nbsp;&gt;&gt;</span>
+                        <span class="hero-typewriter" id="typewriter"></span>
+                        <span class="type-cursor">|</span>
                     </div>
 
-                    <!-- Terminal Command Callout -->
+                    <div class="hero-meta-grid">
+                        <div class="meta-item">
+                            <span class="meta-key">LOC</span>
+                            <span class="meta-sep">:</span>
+                            <span class="meta-val">Bengaluru, India → Japan</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-key">EDU</span>
+                            <span class="meta-sep">:</span>
+                            <span class="meta-val">B.Tech ECE @ Jain University</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-key">GPA</span>
+                            <span class="meta-sep">:</span>
+                            <span class="meta-val">8.2 / 10.0</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-key">STA</span>
+                            <span class="meta-sep">:</span>
+                            <span class="meta-val status-green">AVAILABLE FOR WORK</span>
+                        </div>
+                    </div>
+
                     <div class="terminal-callout">
-                        <div class="terminal-header">
-                            <span class="terminal-dot"></span>
-                            <span class="terminal-dot"></span>
-                            <span class="terminal-dot"></span>
-                            <span class="terminal-title">terminal</span>
+                        <div class="tc-bar">
+                            <div class="tc-dots">
+                                <span class="tcd red"></span>
+                                <span class="tcd yellow"></span>
+                                <span class="tcd green"></span>
+                            </div>
+                            <span class="tc-title">terminal — bash</span>
                         </div>
-                        <div class="terminal-body">
-                            <span class="terminal-prompt">$</span>
-                            <code class="terminal-command">curl vaishnav.world/curl.txt | less</code>
+                        <div class="tc-body">
+                            <span class="tc-prompt">$</span>
+                            <code class="tc-cmd">curl vaishnav.world/curl.txt | less</code>
+                            <button class="copy-btn" data-copy="curl vaishnav.world/curl.txt | less" title="Copy command">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="btn btn-secondary">GitHub</a>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>VIEW_PROJECTS</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="btn btn-ghost">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            <span>GITHUB</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-ascii" aria-hidden="true">
+                    <pre class="ascii-art">
+ ██╗   ██╗███████╗ ██████╗ 
+ ██║   ██║██╔════╝██╔════╝ 
+ ██║   ██║███████╗██║  ███╗
+ ╚██╗ ██╔╝╚════██║██║   ██║
+  ╚████╔╝ ███████║╚██████╔╝
+   ╚═══╝  ╚══════╝ ╚═════╝ </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ABOUT ═══ -->
+        <section id="about" class="section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sh-index">01</span>
+                    <h2 class="sh-title">ABOUT<span class="title-cursor">_</span></h2>
+                    <div class="sh-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-bio">
+                        <div class="bio-block">
+                            <p class="bio-text">
+                                Final-year Electronics & Communication Engineering student with a solid foundation in Embedded Systems, Linux, and systems programming. Experienced across multiple internships building real-time firmware for IoT and wearable devices.
+                            </p>
+                            <p class="bio-text">
+                                Passionate about Rust for embedded targets, Bluetooth LE, and low-power system design. Ex–Vice Treasurer of Evalanche Club. Currently building towards working in Japan's robotics industry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="skills-block">
+                        <div class="skills-category reveal-child">
+                            <h3 class="sk-cat-title">// LANGUAGES</h3>
+                            <div class="skill-tags">
+                                <span class="stag highlight">Rust</span>
+                                <span class="stag highlight">C</span>
+                                <span class="stag highlight">C++</span>
+                                <span class="stag">Python</span>
+                                <span class="stag">Bash</span>
+                                <span class="stag">Lua</span>
+                                <span class="stag">MATLAB</span>
+                            </div>
+                        </div>
+                        <div class="skills-category reveal-child">
+                            <h3 class="sk-cat-title">// EMBEDDED</h3>
+                            <div class="skill-tags">
+                                <span class="stag highlight">Nordic nRF52</span>
+                                <span class="stag highlight">ESP32</span>
+                                <span class="stag">STM32</span>
+                                <span class="stag">Arduino</span>
+                                <span class="stag">Zephyr RTOS</span>
+                            </div>
+                        </div>
+                        <div class="skills-category reveal-child">
+                            <h3 class="sk-cat-title">// PROTOCOLS</h3>
+                            <div class="skill-tags">
+                                <span class="stag highlight">Bluetooth LE</span>
+                                <span class="stag">I2C</span>
+                                <span class="stag">SPI</span>
+                                <span class="stag">UART</span>
+                                <span class="stag">ESP-NOW</span>
+                                <span class="stag">Li-Fi</span>
+                                <span class="stag">Wi-Fi</span>
+                            </div>
+                        </div>
+                        <div class="skills-category reveal-child">
+                            <h3 class="sk-cat-title">// TOOLS</h3>
+                            <div class="skill-tags">
+                                <span class="stag">KiCad</span>
+                                <span class="stag">PlatformIO</span>
+                                <span class="stag">ESP-IDF</span>
+                                <span class="stag">Proteus</span>
+                                <span class="stag">Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stat strip -->
+                <div class="stat-strip reveal">
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="4">0</span>
+                        <span class="stat-label">INTERNSHIPS</span>
+                    </div>
+                    <div class="stat-div">//</div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="8">0</span>
+                        <span class="stat-label">PROJECTS</span>
+                    </div>
+                    <div class="stat-div">//</div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="1">0</span>
+                        <span class="stat-label">PATENT</span>
+                    </div>
+                    <div class="stat-div">//</div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="5">0</span>
+                        <span class="stat-label">LANGUAGES SPOKEN</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
+        <!-- ═══ EXPERIENCE ═══ -->
+        <section id="experience" class="section section-alt reveal">
             <div class="container">
-                <h2 class="section-title">About</h2>
-                <div class="about-content">
-                    <p>
-                        Final-year Electronics and Communication Engineering student with a solid foundation in 
-                        Embedded Systems, Linux, and programming. Experienced through multiple internships and 
-                        projects, with leadership experience as Vice-Treasurer of Evalanche Club.
-                    </p>
-                    <h3>Technical Skills</h3>
-                    <ul class="focus-list">
-                        <li>Programming: C, C++, Python, Rust, Bash, Lua, MATLAB</li>
-                        <li>Embedded Systems: Arduino, ESP32, STM32, Nordic nRF52, Zephyr RTOS</li>
-                        <li>Tools: KiCad, Proteus, PlatformIO, ESP-IDF, Linux Distributions</li>
-                        <li>Specializations: IoT, Bluetooth LE, PCB Design, Real-Time Systems</li>
-                        <li>Languages: English, Japanese, Tamil, Kannada, Hindi</li>
-                    </ul>
+                <div class="section-header">
+                    <span class="sh-index">02</span>
+                    <h2 class="sh-title">EXPERIENCE<span class="title-cursor">_</span></h2>
+                    <div class="sh-line"></div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
                 <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Embedded Systems Development Intern</h3>
-                            <p class="company">Depixel Tech</p>
-                            <p class="period">August 2025 - November 2025 | Bengaluru, Karnataka</p>
-                            <ul class="description">
-                                <li>Developed embedded firmware using Zephyr RTOS and Nordic microcontrollers</li>
+                    <div class="tl-item reveal-child">
+                        <div class="tl-left">
+                            <span class="tl-year">2025</span>
+                            <div class="tl-node"></div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-card-header">
+                                <div>
+                                    <h3 class="tl-role">Embedded Systems Development Intern</h3>
+                                    <p class="tl-company">Depixel Tech</p>
+                                </div>
+                                <span class="tl-badge">AUG–NOV 2025</span>
+                            </div>
+                            <ul class="tl-points">
+                                <li>Developed embedded firmware using <mark>Zephyr RTOS</mark> and Nordic microcontrollers</li>
                                 <li>Designed and optimized PCB layouts for wearable IoT devices</li>
-                                <li>Implemented Bluetooth LE sensor integration using Embedded Rust</li>
+                                <li>Implemented <mark>Bluetooth LE</mark> sensor integration using Embedded Rust</li>
                                 <li>Applied low-power strategies for extended battery life in health monitoring devices</li>
                             </ul>
+                            <div class="tl-tags">
+                                <span>Zephyr RTOS</span><span>Nordic nRF52</span><span>Embedded Rust</span><span>BLE</span><span>PCB Design</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Embedded Systems Intern</h3>
-                            <p class="company">Apsis Solutions</p>
-                            <p class="period">January 2025 - March 2025 | Bengaluru, Karnataka</p>
-                            <ul class="description">
+
+                    <div class="tl-item reveal-child">
+                        <div class="tl-left">
+                            <span class="tl-year">2025</span>
+                            <div class="tl-node"></div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-card-header">
+                                <div>
+                                    <h3 class="tl-role">Embedded Systems Intern</h3>
+                                    <p class="tl-company">Apsis Solutions</p>
+                                </div>
+                                <span class="tl-badge">JAN–MAR 2025</span>
+                            </div>
+                            <ul class="tl-points">
                                 <li>Engineered embedded software for microcontroller-based systems</li>
-                                <li>Developed real-time applications using C, Python, and Bash</li>
-                                <li>Designed and programmed ESP32 IoT devices for automation tasks</li>
+                                <li>Developed real-time applications using <mark>C, Python, and Bash</mark></li>
+                                <li>Designed and programmed <mark>ESP32</mark> IoT devices for automation tasks</li>
                             </ul>
+                            <div class="tl-tags">
+                                <span>ESP32</span><span>C</span><span>Python</span><span>IoT</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Prompt Designer Intern</h3>
-                            <p class="company">LiveOut Solutions</p>
-                            <p class="period">June 2024 - July 2024 | Bengaluru, Karnataka</p>
-                            <ul class="description">
+
+                    <div class="tl-item reveal-child">
+                        <div class="tl-left">
+                            <span class="tl-year">2024</span>
+                            <div class="tl-node"></div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-card-header">
+                                <div>
+                                    <h3 class="tl-role">Prompt Designer Intern</h3>
+                                    <p class="tl-company">LiveOut Solutions</p>
+                                </div>
+                                <span class="tl-badge">JUN–JUL 2024</span>
+                            </div>
+                            <ul class="tl-points">
                                 <li>Conceptualized and designed AI-powered prototypes</li>
                                 <li>Built customized e-commerce stores using Zoho Commerce</li>
                                 <li>Managed cross-functional project timelines and deliverables</li>
                             </ul>
+                            <div class="tl-tags">
+                                <span>AI Prototyping</span><span>Zoho Commerce</span><span>Project Management</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Intern</h3>
-                            <p class="company">PANTECH Solutions</p>
-                            <p class="period">June 2022 - July 2022 | Bengaluru, Karnataka</p>
-                            <ul class="description">
-                                <li>Programmed STM32 and ESP32 boards for IoT control applications</li>
+
+                    <div class="tl-item reveal-child">
+                        <div class="tl-left">
+                            <span class="tl-year">2022</span>
+                            <div class="tl-node"></div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-card-header">
+                                <div>
+                                    <h3 class="tl-role">Intern</h3>
+                                    <p class="tl-company">PANTECH Solutions</p>
+                                </div>
+                                <span class="tl-badge">JUN–JUL 2022</span>
+                            </div>
+                            <ul class="tl-points">
+                                <li>Programmed <mark>STM32 and ESP32</mark> boards for IoT control applications</li>
                                 <li>Learned ARM Cortex-M based microcontroller fundamentals</li>
                                 <li>Practiced PCB layout and component placement</li>
                             </ul>
+                            <div class="tl-tags">
+                                <span>STM32</span><span>ESP32</span><span>ARM Cortex-M</span><span>PCB</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
+        <!-- ═══ PROJECTS ═══ -->
+        <section id="projects" class="section reveal">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <div class="section-header">
+                    <span class="sh-index">03</span>
+                    <h2 class="sh-title">PROJECTS<span class="title-cursor">_</span></h2>
+                    <div class="sh-line"></div>
+                </div>
+
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Hayasen</h3>
-                        <p>Unified sensor interface library providing user-friendly APIs for multiple sensors</p>
-                        <div class="tech-tags">
-                            <span>Embedded Rust</span>
-                            <span>Sensors</span>
-                            <span>no_std</span>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/hayasen" target="_blank" class="proj-card reveal-child featured">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.01</span>
+                                <span class="proj-badge">Embedded Rust</span>
+                            </div>
+                            <h3 class="proj-title">Hayasen</h3>
+                            <p class="proj-desc">Unified sensor interface library providing user-friendly APIs for multiple sensors. Built with <code>no_std</code> compatibility for bare-metal targets.</p>
+                            <div class="proj-tags">
+                                <span>Embedded Rust</span><span>no_std</span><span>Sensors</span><span>Library</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish/hayasen" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>ComChan Serial Monitor</h3>
-                        <p>Blazingly fast and minimal serial monitor with I/O, plotting, and data logging capabilities</p>
-                        <div class="tech-tags">
-                            <span>Rust</span>
-                            <span>Serial</span>
-                            <span>TUI</span>
+                    </a>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/comchan" target="_blank" class="proj-card reveal-child featured">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.02</span>
+                                <span class="proj-badge">Rust / TUI</span>
+                            </div>
+                            <h3 class="proj-title">ComChan</h3>
+                            <p class="proj-desc">Blazingly fast and minimal serial monitor with I/O, real-time plotting, and data logging. Built for embedded developers who live in the terminal.</p>
+                            <div class="proj-tags">
+                                <span>Rust</span><span>Serial</span><span>TUI</span><span>Plotting</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish/comchan" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Sbor</h3>
-                        <p>Project manager for C, written in C, inspired by Cargo build system</p>
-                        <div class="tech-tags">
-                            <span>C</span>
-                            <span>Build Tool</span>
+                    </a>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/sbor" target="_blank" class="proj-card reveal-child">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.03</span>
+                                <span class="proj-badge">C</span>
+                            </div>
+                            <h3 class="proj-title">Sbor</h3>
+                            <p class="proj-desc">Project manager for C, written in C. Cargo-inspired build system bringing modern developer ergonomics to C projects.</p>
+                            <div class="proj-tags">
+                                <span>C</span><span>Build Tool</span><span>CLI</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish/sbor" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Arduino Interactive CLI</h3>
-                        <p>TUI tool to simplify the transition from Arduino IDE to Arduino CLI for beginners</p>
-                        <div class="tech-tags">
-                            <span>Rust</span>
-                            <span>Arduino</span>
-                            <span>CLI</span>
+                    </a>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli" target="_blank" class="proj-card reveal-child">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.04</span>
+                                <span class="proj-badge">Bash / Arduino-CLI</span>
+                            </div>
+                            <h3 class="proj-title">Arduino Interactive CLI</h3>
+                            <p class="proj-desc">TUI tool to simplify the transition from Arduino IDE to Arduino CLI for beginners. Makes the command line approachable for hardware hackers.</p>
+                            <div class="proj-tags">
+                                <span>Rust</span><span>Arduino</span><span>CLI</span><span>TUI</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Remote Field Monitoring System</h3>
-                        <p>IoT system for farmers to remotely track field conditions using ESP-NOW protocol and ThingSpeak</p>
-                        <div class="tech-tags">
-                            <span>ESP32</span>
-                            <span>ESP-NOW</span>
-                            <span>IoT</span>
+                    </a>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="proj-card reveal-child">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.05</span>
+                                <span class="proj-badge">IoT</span>
+                            </div>
+                            <h3 class="proj-title">Remote Field Monitor</h3>
+                            <p class="proj-desc">IoT system for farmers to remotely track field conditions using ESP-NOW mesh protocol and ThingSpeak cloud dashboard.</p>
+                            <div class="proj-tags">
+                                <span>ESP32</span><span>ESP-NOW</span><span>IoT</span><span>ThingSpeak</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Portable Water Purity Tester</h3>
-                        <p>Patented portable device for on-the-go water quality testing (Patent: 202341087033 A)</p>
-                        <div class="tech-tags">
-                            <span>IoT</span>
-                            <span>Sensors</span>
-                            <span>Patented</span>
+                    </a>
+
+                    <a href="#projects" class="proj-card reveal-child patent">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.06</span>
+                                <span class="proj-badge patented">⭐ PATENTED</span>
+                            </div>
+                            <h3 class="proj-title">Portable Water Purity Tester</h3>
+                            <p class="proj-desc">Patented portable device for on-the-go water quality testing. Patent No: <code>202341087033 A</code></p>
+                            <div class="proj-tags">
+                                <span>IoT</span><span>Sensors</span><span>Hardware</span>
+                            </div>
+                            <div class="proj-arrow">PATENT →</div>
                         </div>
-                        <a href="#projects" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Wireless Water Level Monitor</h3>
-                        <p>Community project for enhanced safety during overhead water tank maintenance</p>
-                        <div class="tech-tags">
-                            <span>ESP32</span>
-                            <span>Wireless</span>
-                            <span>Community</span>
+                    </a>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="proj-card reveal-child">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.07</span>
+                                <span class="proj-badge">Wireless</span>
+                            </div>
+                            <h3 class="proj-title">Wireless Water Level Monitor</h3>
+                            <p class="proj-desc">Community project for enhanced safety during overhead water tank maintenance. Wireless alerts for technicians.</p>
+                            <div class="proj-tags">
+                                <span>ESP32</span><span>Wireless</span><span>Safety</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish" class="project-link">View →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Smart Door Lock using Li-Fi</h3>
-                        <p>Innovative door lock utilizing Li-Fi technology for enhanced security, unlockable using phone flashlight</p>
-                        <div class="tech-tags">
-                            <span>Li-Fi</span>
-                            <span>Security</span>
-                            <span>IoT</span>
+                    </a>
+
+                    <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="proj-card reveal-child">
+                        <div class="proj-card-inner">
+                            <div class="proj-top">
+                                <span class="proj-index">P.08</span>
+                                <span class="proj-badge">Li-Fi</span>
+                            </div>
+                            <h3 class="proj-title">Smart Door Lock via Li-Fi</h3>
+                            <p class="proj-desc">Innovative door lock utilizing Li-Fi technology for enhanced security — unlock using your phone's flashlight as a key.</p>
+                            <div class="proj-tags">
+                                <span>Li-Fi</span><span>Security</span><span>IoT</span>
+                            </div>
+                            <div class="proj-arrow">VIEW →</div>
                         </div>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish" class="project-link">View →</a>
-                    </div>
+                    </a>
+
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section section-alt">
+        <!-- ═══ CONTACT ═══ -->
+        <section id="contact" class="section section-alt reveal">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-content">
-                    <p>Interested in embedded systems, Rust, or robotics? Let's connect!</p>
-                    <div class="contact-links">
-                        <a href="mailto:write2vaichu@gmail.com" class="contact-link">
-                            <span class="icon">✉️</span>
-                            <span>Email</span>
-                        </a>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="contact-link">
-                            <span class="icon">🐙</span>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://linkedin.com/in/vaishnav-sabari-girish" target="_blank" class="contact-link">
-                            <span class="icon">💼</span>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://vaishnav.world" target="_blank" class="contact-link">
-                            <span class="icon">🌐</span>
-                            <span>Website</span>
-                        </a>
+                <div class="section-header">
+                    <span class="sh-index">04</span>
+                    <h2 class="sh-title">CONTACT<span class="title-cursor">_</span></h2>
+                    <div class="sh-line"></div>
+                </div>
+
+                <div class="contact-layout">
+                    <div class="contact-left">
+                        <p class="contact-headline">LET'S BUILD<br>SOMETHING<br><span class="hl-green">REAL.</span></p>
+                        <p class="contact-sub">Interested in embedded systems, Rust, or robotics? Open to internships, collaborations, and full-time roles.</p>
+                    </div>
+
+                    <div class="contact-right">
+                        <div class="contact-terminal">
+                            <div class="ct-bar">
+                                <div class="tc-dots">
+                                    <span class="tcd red"></span>
+                                    <span class="tcd yellow"></span>
+                                    <span class="tcd green"></span>
+                                </div>
+                                <span class="tc-title">contact.sh</span>
+                            </div>
+                            <div class="ct-body">
+                                <div class="ct-line">
+                                    <span class="ct-prompt">$</span>
+                                    <span class="ct-cmd">./reach_out --channel email</span>
+                                </div>
+                                <a href="mailto:vaishnav.sabari.girish@gmail.com" class="ct-result link">vaishnav.sabari.girish@gmail.com</a>
+
+                                <div class="ct-line">
+                                    <span class="ct-prompt">$</span>
+                                    <span class="ct-cmd">./reach_out --channel github</span>
+                                </div>
+                                <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="ct-result link">github.com/Vaishnav-Sabari-Girish</a>
+
+                                <div class="ct-line">
+                                    <span class="ct-prompt">$</span>
+                                    <span class="ct-cmd">./reach_out --channel linkedin</span>
+                                </div>
+                                <a href="https://linkedin.com/in/vaishnav-sabari-girish" target="_blank" class="ct-result link">linkedin.com/in/vaishnav-sabari-girish</a>
+
+                                <div class="ct-line">
+                                    <span class="ct-prompt">$</span>
+                                    <span class="ct-cmd">./reach_out --channel mastodon</span>
+                                </div>
+                                <a href="https://elk.zone/defcon.social/@vaishnav" target="_blank" class="ct-result link">elk.zone/defcon.social/@vaishnav</a>
+
+                                <div class="ct-line blink-line">
+                                    <span class="ct-prompt">$</span>
+                                    <span class="ct-cursor-blink">█</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Vaishnav Sabari Girish. Built with HTML, CSS, and JavaScript.</p>
+            <div class="footer-inner">
+                <span class="footer-logo">[VSG]</span>
+                <span class="footer-copy">© 2025 Vaishnav Sabari Girish — Built with HTML, CSS, JS</span>
+                <span class="footer-sys">SYS:OK // v2.1.0</span>
+            </div>
         </div>
     </footer>
 
