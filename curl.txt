@@ -14,7 +14,7 @@
   solid foundation in Embedded Systems, Linux, and programming.
 
   📍 Location: Bengaluru, India
-  🎓 Education: B.Tech ECE @ Jain University (CGPA: 8.2)
+  🎓 Education: B.Tech ECE @ Jain University
   💼 Role: Ex-Vice-Treasurer @ Evalanche Club
 
 ┌───────────────────────────────────────────────────────────────────┐
@@ -58,49 +58,37 @@
 │ FEATURED PROJECTS                                                 │
 └───────────────────────────────────────────────────────────────────┘
 
-  • Hayasen
-    Unified sensor interface library in Embedded Rust
-    → https://github.com/Vaishnav-Sabari-Girish/hayasen
+  • AlertAngel
+    ⭐ PATENTED | Patent No: 202641042677 A
+    Elderly monitoring system with an ID-card like form factor
+    → https://github.com/AlertAngel
 
   • ComChan Serial Monitor
     Blazingly fast serial monitor with plotting & data logging
-    → https://github.com/Vaishnav-Sabari-Girish/comchan
+    → https://github.com/Vaishnav-Sabari-Girish/ComChan
 
-  • Sbor
-    Project manager for C, inspired by Cargo
-    → https://github.com/Vaishnav-Sabari-Girish/sbor
+  • NextStd
+    A safer standard library for the next generation
+    → https://github.com/NextStd
 
-  • Arduino Interactive CLI
-    TUI tool for Arduino CLI beginners
-
-  • Remote Field Monitoring System
-    ESP-NOW based IoT solution for farmers (ThingSpeak)
+  • Hayasen
+    Unified sensor interface library in Embedded Rust
+    → https://github.com/Vaishnav-Sabari-Girish/hayasen
 
   • Portable Water Purity Tester
     ⭐ PATENTED | Patent No: 202341087033 A
     On-the-go water quality testing device
 
-  • Wireless Water Level Monitor
-    Community safety project for tank maintenance
-
   • Smart Door Lock using Li-Fi
     Innovative security system using phone flashlight
+    → https://premierscience.com/pjs-25-1242/
 
-┌───────────────────────────────────────────────────────────────────┐
-│ CERTIFICATIONS & ACHIEVEMENTS                                     │
-└───────────────────────────────────────────────────────────────────┘
-
-  📜 C Programming for Embedded Applications (LinkedIn Learning)
-  📜 Microcontroller Embedded C Programming (Udemy)
-  📜 Digital Signal Processing 1 & 2 (EPFL)
-  📜 VLSI SoC Design using Verilog HDL (Maven Silicon)
-  📄 Publication: Star Location Pointer using MATLAB (2023)
 
 ┌───────────────────────────────────────────────────────────────────┐
 │ LANGUAGES                                                         │
 └───────────────────────────────────────────────────────────────────┘
 
-  🗣️  English, Japanese, Tamil, Kannada, Hindi
+  🗣️  English, Japanese (N4), Tamil (Native), Kannada, Hindi
 
 ┌───────────────────────────────────────────────────────────────────┐
 │ CONNECT WITH ME                                                   │
@@ -109,17 +97,15 @@
   🌐 Website:  https://vaishnav.world
   🐙 GitHub:   https://github.com/Vaishnav-Sabari-Girish
   💼 LinkedIn: https://linkedin.com/in/vaishnav-sabari-girish
-  ✉️  Email:    write2vaichu@gmail.com
+  🐘 Mastodon: https://elk.zone/defcon.social/@vaishnav
+  🆔 ORCID:    https://orcid.org/0009-0001-7109-5970
+  ✉️  Email:   vaishnav.sabari.girish@gmail.com
 
 ───────────────────────────────────────────────────────────────────
 
   💡 Tip: Visit https://vaishnav.world in your browser for the
            full interactive portfolio!
 
-  📄 curl https://vaishnav.world/VaishnavSabariGirish_Resume.pdf
-     to download my resume
-
 ───────────────────────────────────────────────────────────────────
 
   "Building embedded systems one bit at a time 🚀"
-

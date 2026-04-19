@@ -8,7 +8,6 @@ const roles = [
     'Rust Developer',
     'IoT Architect',
     'Linux Hacker',
-    'PCB Designer',
     'Firmware Engineer',
 ];
 
