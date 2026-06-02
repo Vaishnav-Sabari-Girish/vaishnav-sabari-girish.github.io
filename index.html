@@ -3,508 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSG // Vaishnav Sabari Girish</title>
+    <title>Vaishnav Sabari Girish</title>
     <meta name="description" content="Embedded Systems Engineer — Rust, Linux, low-level systems">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700;900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Scanline overlay -->
-    <div class="scanlines" aria-hidden="true"></div>
-    <!-- CRT flicker overlay -->
-    <div class="crt-flicker" aria-hidden="true"></div>
-    <!-- Noise texture -->
-    <div class="noise" aria-hidden="true"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="#home" class="nav-logo">
-                <span class="logo-bracket">[</span>VSG<span class="logo-bracket">]</span>
-            </a>
-            <div class="nav-status">
-                <span class="status-dot"></span>
-                <span class="status-text" id="statusText">ONLINE</span>
+    <main class="terminal">
+        <!-- FIRST COMMAND: man page style -->
+        <div class="line">
+            <span class="prompt">vsg@endeavour ~ $</span> <span class="cmd">man vsg</span>
+        </div>
+        
+        <div class="output man-page">
+            <div class="section">
+                <h2>NAME</h2>
+                <div class="indent">
+                    <p>vsg — Vaishnav Sabari Girish</p>
+                </div>
             </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link" data-index="00">HOME</a></li>
-                <li><a href="#about" class="nav-link" data-index="01">ABOUT</a></li>
-                <li><a href="#experience" class="nav-link" data-index="02">EXP</a></li>
-                <li><a href="#projects" class="nav-link" data-index="03">PROJECTS</a></li>
-                <li><a href="#contact" class="nav-link" data-index="04">CONTACT</a></li>
+
+            <div class="section">
+                <h2>SYNOPSIS</h2>
+                <div class="indent">
+                    <p>vsg [OPTIONS]</p>
+                </div>
+            </div>
+
+<div class="section">
+                <h2>DESCRIPTION</h2>
+                <div class="indent">
+                    <p>
+                        I'm an embedded systems engineer building the bridge between bare metal and memory safety. I specialize in Embedded Rust, C, and microcontrollers like the ESP32, STM32, and RP2040, hacking on everything from offline-first IoT wearables to blazing-fast TUI tools.
+                    </p>
+                    <br>
+                    <p>
+                        I love low-level systems because there is something deeply satisfying about stripping away the bloat and understanding exactly how hardware and software interact. My goal is to build tools and firmware that are fast, reliable, and respectful of system resources.
+                    </p>
+                    <br>
+                    <p>
+                        I basically live in the terminal (Neovim + EndeavourOS is top tier). When I'm not writing firmware or endlessly tweaking my Wayland compositor, you can usually find me studying Japanese, on bike rides, or planning a side quest into astrophysics.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>EXPERIENCE</h2>
+                <div class="indent">
+                    <p><strong>Depixel Tech</strong> — Embedded Systems Development Intern (Aug-Nov 2025)</p>
+                    <ul>
+                        <li>Developed embedded firmware using Zephyr RTOS and Nordic microcontrollers.</li>
+                        <li>Implemented Bluetooth LE sensor integration using Embedded Rust.</li>
+                    </ul>
+                    <br>
+                    <p><strong>Apsis Solutions</strong> — Embedded Systems Intern (Jan-Mar 2025)</p>
+                    <ul>
+                        <li>Engineered real-time applications using C, Python, and Bash.</li>
+                        <li>Designed ESP32 IoT devices for automation tasks.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>OPTIONS</h2>
+                <div class="indent">
+                    <p><strong>--skills</strong></p>
+                    <div class="indent">
+                        <p>C, Rust, C++, Python, Bash, Zephyr RTOS, Nordic nRF52, STM32, ESP32, Bluetooth LE, ESP-NOW, Linux</p>
+                    </div>
+                    <br>
+                    <p><strong>--contact</strong></p>
+                    <div class="indent">
+                        <p>Email    : <a href="mailto:vaishnav.sabari.girish@gmail.com">vaishnav.sabari.girish@gmail.com</a></p>
+                        <p>GitHub   : <a href="https://github.com/Vaishnav-Sabari-Girish">github.com/Vaishnav-Sabari-Girish</a></p>
+                        <p>LinkedIn : <a href="https://linkedin.com/in/vaishnav-sabari-girish">linkedin.com/in/vaishnav-sabari-girish</a></p>
+                        <p>Mastodon : <a href="https://elk.zone/defcon.social/@vaishnav">elk.zone/defcon.social/@vaishnav</a></p>
+                        <p>ORCID    : <a href="https://orcid.org/0009-0001-7109-5970">orcid.org/0009-0001-7109-5970</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="man-footer">
+                <span>Manual page vsg(1) line 1/1 (END)</span>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- SECOND COMMAND: glow markdown style -->
+        <div class="line">
+            <span class="prompt">vsg@endeavour ~ $</span> <span class="cmd">glow projects.md</span>
+        </div>
+
+        <div class="output glow">
+            <h2 class="glow-heading">Projects</h2>
+            
+            <ul class="glow-list">
+                <li>
+                    <strong><a href="https://github.com/Vaishnav-Sabari-Girish/ComChan">ComChan</a></strong>
+                    <br>Blazingly fast and minimal serial monitor with I/O, real-time plotting, and data logging in Rust/TUI.
+                </li>
+                <li>
+                    <strong><a href="https://github.com/NextStd">NextStd</a></strong>
+                    <br>A safer standard library for the next generation.
+                </li>
+                <li>
+                    <strong><a href="https://github.com/AlertAngel">AlertAngel</a></strong>
+ (Patented: 202641042677 A)
+                    <br>Elderly monitoring system with non-invasive vital parameter sensing and ID-card like form factor.
+                </li>
+                <li>
+                    <strong><a href="https://github.com/Vaishnav-Sabari-Girish/hayasen">Hayasen</a></strong>
+                    <br>Unified sensor interface library built with <code>no_std</code> compatibility for bare-metal targets.
+                </li>
+                <li>
+                    <strong><a href="https://github.com/Vaishnav-Sabari-Girish/Embedded-Rust">Embedded Rust Programs</a></strong>
+                    <br>A collection of Embedded Rust programs using multiple microcontrollers.
+                </li>
             </ul>
         </div>
-    </nav>
 
-    <main>
-        <!-- ═══ HERO ═══ -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-top-bar">
-                    <span class="top-bar-label">SYS://PORTFOLIO_v2.1</span>
-                    <span class="top-bar-label">BOOT OK</span>
-                </div>
-
-                <div class="hero-content">
-                    <div class="hero-prefix">
-                        <span class="prefix-line">$ whoami</span>
-                    </div>
-                    <h1 class="hero-name">
-                        <span class="name-line" id="heroName"></span>
-                        <span class="cursor-blink">█</span>
-                    </h1>
-                    <div class="hero-role">
-                        <span class="role-label">// ROLE &nbsp;&nbsp;&gt;&gt;</span>
-                        <span class="hero-typewriter" id="typewriter"></span>
-                        <span class="type-cursor">|</span>
-                    </div>
-
-                    <div class="hero-meta-grid">
-                        <div class="meta-item">
-                            <span class="meta-key">LOC</span>
-                            <span class="meta-sep">:</span>
-                            <span class="meta-val">Bengaluru, India → Fukuyama, Hiroshima, Japan</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-key">EDU</span>
-                            <span class="meta-sep">:</span>
-                            <span class="meta-val">B.Tech ECE @ Jain University</span>
-                        </div>
-                    </div>
-
-                    <div class="terminal-callout">
-                        <div class="tc-bar">
-                            <div class="tc-dots">
-                                <span class="tcd red"></span>
-                                <span class="tcd yellow"></span>
-                                <span class="tcd green"></span>
-                            </div>
-                            <span class="tc-title">terminal — bash</span>
-                        </div>
-                        <div class="tc-body">
-                            <span class="tc-prompt">$</span>
-                            <code class="tc-cmd">curl vaishnav.world/curl.txt</code>
-                            <button class="copy-btn" data-copy="curl vaishnav.world/curl.txt | less" title="Copy command">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>VIEW_PROJECTS</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                        <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="btn btn-ghost">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                            <span>GITHUB</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-ascii" aria-hidden="true">
-                    <pre class="ascii-art">
- ██╗   ██╗███████╗ ██████╗ 
- ██║   ██║██╔════╝██╔════╝ 
- ██║   ██║███████╗██║  ███╗
- ╚██╗ ██╔╝╚════██║██║   ██║
-  ╚████╔╝ ███████║╚██████╔╝
-   ╚═══╝  ╚══════╝ ╚═════╝ </pre>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ ABOUT ═══ -->
-        <section id="about" class="section reveal">
-            <div class="container">
-                <div class="section-header">
-                    <span class="sh-index">01</span>
-                    <h2 class="sh-title">ABOUT<span class="title-cursor">_</span></h2>
-                    <div class="sh-line"></div>
-                </div>
-
-                <div class="about-grid">
-                    <div class="about-bio">
-                        <div class="bio-block">
-                            <p class="bio-text">
-                                Final-year Electronics & Communication Engineering student with a solid foundation in Embedded Systems, Linux, and systems programming. Experienced across multiple internships building real-time firmware for IoT and wearable devices.
-                            </p>
-                            <p class="bio-text">
-                                Passionate about Rust for embedded targets, Bluetooth LE, and low-power system design. Ex–Vice Treasurer of Evalanche Club. Currently building towards working in Japan's Disaster Management Industry.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="skills-block">
-                        <div class="skills-category reveal-child">
-                            <h3 class="sk-cat-title">// PROGRAMMING LANGUAGES</h3>
-                            <div class="skill-tags">
-                                <span class="stag highlight">C</span>
-                                <span class="stag highlight">Rust</span>
-                                <span class="stag highlight">C++</span>
-                                <span class="stag highlight">Python</span>
-                                <span class="stag highlight">Bash</span>
-                                <span class="stag">Lua</span>
-                                <span class="stag">MATLAB</span>
-                            </div>
-                        </div>
-                        <div class="skills-category reveal-child">
-                            <h3 class="sk-cat-title">// EMBEDDED</h3>
-                            <div class="skill-tags">
-                                <span class="stag highlight">Zephyr RTOS</span>
-                                <span class="stag highlight">Nordic nRF52</span>
-                                <span class="stag highlight">STM32</span>
-                                <span class="stag highlight">ESP32</span>
-                                <span class="stag highlight">Arduino</span>
-                            </div>
-                        </div>
-                        <div class="skills-category reveal-child">
-                            <h3 class="sk-cat-title">// PROTOCOLS</h3>
-                            <div class="skill-tags">
-                                <span class="stag highlight">Bluetooth LE</span>
-                                <span class="stag highlight">I2C</span>
-                                <span class="stag highlight">SPI</span>
-                                <span class="stag highlight">UART</span>
-                                <span class="stag highlight">ESP-NOW</span>
-                                <span class="stag highlight">Li-Fi</span>
-                                <span class="stag highlight">Wi-Fi</span>
-                            </div>
-                        </div>
-                        <div class="skills-category reveal-child">
-                            <h3 class="sk-cat-title">// TOOLS</h3>
-                            <div class="skill-tags">
-                                <span class="stag">KiCad</span>
-                                <span class="stag">PlatformIO</span>
-                                <span class="stag">ESP-IDF</span>
-                                <span class="stag">Proteus</span>
-                                <span class="stag highlight">Linux</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Stat strip -->
-                <div class="stat-strip reveal">
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="4">0</span>
-                        <span class="stat-label">INTERNSHIPS</span>
-                    </div>
-                    <div class="stat-div">//</div>
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="6">0</span>
-                        <span class="stat-label">PROJECTS</span>
-                    </div>
-                    <div class="stat-div">//</div>
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="2">0</span>
-                        <span class="stat-label">PATENTS</span>
-                    </div>
-                    <div class="stat-div">//</div>
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="5">0</span>
-                        <span class="stat-label">LANGUAGES SPOKEN</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ EXPERIENCE ═══ -->
-        <section id="experience" class="section section-alt reveal">
-            <div class="container">
-                <div class="section-header">
-                    <span class="sh-index">02</span>
-                    <h2 class="sh-title">EXPERIENCE<span class="title-cursor">_</span></h2>
-                    <div class="sh-line"></div>
-                </div>
-
-                <div class="timeline">
-                    <div class="tl-item reveal-child">
-                        <div class="tl-left">
-                            <span class="tl-year">2025</span>
-                            <div class="tl-node"></div>
-                        </div>
-                        <div class="tl-card">
-                            <div class="tl-card-header">
-                                <div>
-                                    <h3 class="tl-role">Embedded Systems Development Intern</h3>
-                                    <p class="tl-company">Depixel Tech</p>
-                                </div>
-                                <span class="tl-badge">AUG–NOV 2025</span>
-                            </div>
-                            <ul class="tl-points">
-                                <li>Developed embedded firmware using <mark>Zephyr RTOS</mark> and Nordic microcontrollers</li>
-                                <li>Designed and optimized PCB layouts for wearable IoT devices</li>
-                                <li>Implemented <mark>Bluetooth LE</mark> sensor integration using Embedded Rust</li>
-                                <li>Applied low-power strategies for extended battery life in health monitoring devices</li>
-                            </ul>
-                            <div class="tl-tags">
-                                <span>Zephyr RTOS</span><span>Nordic nRF52</span><span>Embedded Rust</span><span>BLE</span><span>PCB Design</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tl-item reveal-child">
-                        <div class="tl-left">
-                            <span class="tl-year">2025</span>
-                            <div class="tl-node"></div>
-                        </div>
-                        <div class="tl-card">
-                            <div class="tl-card-header">
-                                <div>
-                                    <h3 class="tl-role">Embedded Systems Intern</h3>
-                                    <p class="tl-company">Apsis Solutions</p>
-                                </div>
-                                <span class="tl-badge">JAN–MAR 2025</span>
-                            </div>
-                            <ul class="tl-points">
-                                <li>Engineered embedded software for microcontroller-based systems</li>
-                                <li>Developed real-time applications using <mark>C, Python, and Bash</mark></li>
-                                <li>Designed and programmed <mark>ESP32</mark> IoT devices for automation tasks</li>
-                            </ul>
-                            <div class="tl-tags">
-                                <span>ESP32</span><span>C</span><span>Python</span><span>IoT</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tl-item reveal-child">
-                        <div class="tl-left">
-                            <span class="tl-year">2024</span>
-                            <div class="tl-node"></div>
-                        </div>
-                        <div class="tl-card">
-                            <div class="tl-card-header">
-                                <div>
-                                    <h3 class="tl-role">Prompt Designer Intern</h3>
-                                    <p class="tl-company">LiveOut Solutions</p>
-                                </div>
-                                <span class="tl-badge">JUN–JUL 2024</span>
-                            </div>
-                            <ul class="tl-points">
-                                <li>Conceptualized and designed AI-powered prototypes</li>
-                                <li>Built customized e-commerce stores using Zoho Commerce</li>
-                                <li>Managed cross-functional project timelines and deliverables</li>
-                            </ul>
-                            <div class="tl-tags">
-                                <span>AI Prototyping</span><span>Zoho Commerce</span><span>Project Management</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tl-item reveal-child">
-                        <div class="tl-left">
-                            <span class="tl-year">2022</span>
-                            <div class="tl-node"></div>
-                        </div>
-                        <div class="tl-card">
-                            <div class="tl-card-header">
-                                <div>
-                                    <h3 class="tl-role">Intern</h3>
-                                    <p class="tl-company">PANTECH Solutions</p>
-                                </div>
-                                <span class="tl-badge">JUN–JUL 2022</span>
-                            </div>
-                            <ul class="tl-points">
-                                <li>Programmed <mark>STM32 and ESP32</mark> boards for IoT control applications</li>
-                                <li>Learned ARM Cortex-M based microcontroller fundamentals</li>
-                                <li>Practiced PCB layout and component placement</li>
-                            </ul>
-                            <div class="tl-tags">
-                                <span>STM32</span><span>ESP32</span><span>ARM Cortex-M</span><span>PCB</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ PROJECTS ═══ -->
-        <section id="projects" class="section reveal">
-            <div class="container">
-                <div class="section-header">
-                    <span class="sh-index">03</span>
-                    <h2 class="sh-title">PROJECTS<span class="title-cursor">_</span></h2>
-                    <div class="sh-line"></div>
-                </div>
-
-                <div class="projects-grid">
-                    <a href="https://github.com/AlertAngel" class="proj-card reveal-child patent">
-                        <div class="proj-card-inner">
-                            <div class="proj-top">
-                                <span class="proj-index">P.01</span>
-                                <span class="proj-badge patented">⭐ PATENTED</span>
-                            </div>
-                            <h3 class="proj-title">AlertAngel</h3>
-                            <p class="proj-desc">Patented  Elderly monitoring system with non-invasive vital parameter sensing and ID-card like form factor Patent No: <code>202641042677 A</code></p>
-                            <div class="proj-tags">
-                                <span>BLE</span><span>Sensors</span><span>Hardware</span><span>Elderly Monitoring</span>
-                            </div>
-                            <div class="proj-arrow">VIEW →</div>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/Vaishnav-Sabari-Girish/ComChan" target="_blank" class="proj-card reveal-child featured">
-                        <div class="proj-card-inner">
-                            <div class="proj-top">
-                                <span class="proj-index">P.02</span>
-                                <span class="proj-badge">Rust / TUI</span>
-                            </div>
-                            <h3 class="proj-title">ComChan</h3>
-                            <p class="proj-desc">Blazingly fast and minimal serial monitor with I/O, real-time plotting, and data logging. Built for embedded developers who live in the terminal.</p>
-                            <div class="proj-tags">
-                                <span>Rust</span><span>Serial</span><span>TUI</span><span>Plotting</span>
-                            </div>
-                            <div class="proj-arrow">VIEW →</div>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/NextStd" target="_blank" class="proj-card reveal-child featured">
-                        <div class="proj-card-inner">
-                            <div class="proj-top">
-                                <span class="proj-index">P.03</span>
-                                <span class="proj-badge">C / C++ / Rust / standard lib</span>
-                            </div>
-                            <h3 class="proj-title">NextStd</h3>
-                            <p class="proj-desc">A safer standard library for the next generation.</p>
-                            <div class="proj-tags">
-                                <span>Rust</span><span>stdio</span><span>lib</span>
-                            </div>
-                            <div class="proj-arrow">VIEW →</div>
-                        </div>
-                    </a>
-
-
-                    <a href="https://github.com/Vaishnav-Sabari-Girish/hayasen" target="_blank" class="proj-card reveal-child featured">
-                        <div class="proj-card-inner">
-                            <div class="proj-top">
-                                <span class="proj-index">P.04</span>
-                                <span class="proj-badge">Embedded Rust</span>
-                            </div>
-                            <h3 class="proj-title">Hayasen</h3>
-                            <p class="proj-desc">Unified sensor interface library providing user-friendly APIs for multiple sensors. Built with <code>no_std</code> compatibility for bare-metal targets.</p>
-                            <div class="proj-tags">
-                                <span>Embedded Rust</span><span>no_std</span><span>Sensors</span><span>Library</span>
-                            </div>
-                            <div class="proj-arrow">VIEW →</div>
-                        </div>
-                    </a>
-
-
-                    <a href="#projects" class="proj-card reveal-child patent">
-                        <div class="proj-card-inner">
-                            <div class="proj-top">
-                                <span class="proj-index">P.05</span>
-                                <span class="proj-badge patented">⭐ PATENTED</span>
-                            </div>
-                            <h3 class="proj-title">Portable Water Purity Tester</h3>
-                            <p class="proj-desc">Patented portable device for on-the-go water quality testing. Patent No: <code>202341087033 A</code></p>
-                            <div class="proj-tags">
-                                <span>IoT</span><span>Sensors</span><span>Hardware</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://premierscience.com/pjs-25-1242/" target="_blank" class="proj-card reveal-child">
-                        <div class="proj-card-inner">
-                            <div class="proj-top">
-                                <span class="proj-index">P.06</span>
-                                <span class="proj-badge">Li-Fi</span>
-                            </div>
-                            <h3 class="proj-title">Smart Door Lock via Li-Fi</h3>
-                            <p class="proj-desc">Innovative door lock utilizing Li-Fi technology for enhanced security — unlock using your phone's flashlight as a key.</p>
-                            <div class="proj-tags">
-                                <span>Li-Fi</span><span>Security</span><span>IoT</span>
-                            </div>
-                            <div class="proj-arrow">VIEW →</div>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ CONTACT ═══ -->
-        <section id="contact" class="section section-alt reveal">
-            <div class="container">
-                <div class="section-header">
-                    <span class="sh-index">04</span>
-                    <h2 class="sh-title">CONTACT<span class="title-cursor">_</span></h2>
-                    <div class="sh-line"></div>
-                </div>
-
-                <div class="contact-layout">
-                    <div class="contact-left">
-                        <p class="contact-headline">LET'S BUILD<br>SOMETHING<br><span class="hl-green">REAL.</span></p>
-                        <p class="contact-sub">Interested in embedded systems, Rust, or robotics? Open to internships and collaborations.</p>
-                    </div>
-
-                    <div class="contact-right">
-                        <div class="contact-terminal">
-                            <div class="ct-bar">
-                                <div class="tc-dots">
-                                    <span class="tcd red"></span>
-                                    <span class="tcd yellow"></span>
-                                    <span class="tcd green"></span>
-                                </div>
-                                <span class="tc-title">contact.sh</span>
-                            </div>
-                            <div class="ct-body">
-                                <div class="ct-line">
-                                    <span class="ct-prompt">$</span>
-                                    <span class="ct-cmd">./reach_out --channel email</span>
-                                </div>
-                                <a href="mailto:vaishnav.sabari.girish@gmail.com" class="ct-result link">vaishnav.sabari.girish@gmail.com</a>
-
-                                <div class="ct-line">
-                                    <span class="ct-prompt">$</span>
-                                    <span class="ct-cmd">./reach_out --channel github</span>
-                                </div>
-                                <a href="https://github.com/Vaishnav-Sabari-Girish" target="_blank" class="ct-result link">github.com/Vaishnav-Sabari-Girish</a>
-
-                                <div class="ct-line">
-                                    <span class="ct-prompt">$</span>
-                                    <span class="ct-cmd">./reach_out --channel linkedin</span>
-                                </div>
-                                <a href="https://linkedin.com/in/vaishnav-sabari-girish" target="_blank" class="ct-result link">linkedin.com/in/vaishnav-sabari-girish</a>
-
-                                <div class="ct-line">
-                                    <span class="ct-prompt">$</span>
-                                    <span class="ct-cmd">./reach_out --channel mastodon</span>
-                                </div>
-                                <a href="https://elk.zone/defcon.social/@vaishnav" target="_blank" class="ct-result link">elk.zone/defcon.social/@vaishnav</a>
-
-                                <div class="ct-line">
-                                    <span class="ct-prompt">$</span>
-                                    <span class="ct-cmd">./reach_out --channel orcid</span>
-                                </div>
-                                <a href="https://orcid.org/0009-0001-7109-5970" target="_blank" class="ct-result link">orcid.org/0009-0001-7109-5970</a>
-                                <div class="ct-line blink-line">
-                                    <span class="ct-prompt">$</span>
-                                    <span class="ct-cursor-blink">█</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-logo">[VSG]</span>
-                <span class="footer-copy">© 2025 Vaishnav Sabari Girish</span>
-            </div>
+        <!-- ACTIVE PROMPT -->
+        <br>
+        <div class="line">
+            <span class="prompt">vsg@endeavour ~ $</span> <span class="cursor">█</span>
         </div>
-    </footer>
-
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
