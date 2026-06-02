@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor.style.display = 'none';
     setTimeout(() => {
         cursor.style.display = 'inline';
-        window.scrollTo(0, document.body.scrollHeight);
+        // window.scrollTo(0, document.body.scrollHeight);
     }, 400);
 });
